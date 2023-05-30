@@ -12,3 +12,10 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.text-gradient-h1-reverse {
+  background: linear-gradient(90deg, #420380 2.34%, rgb(202 138 4 /1) 100.78%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

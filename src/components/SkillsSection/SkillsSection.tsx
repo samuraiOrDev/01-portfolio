@@ -3,7 +3,6 @@ import React from "react";
 import { SkillsTitle } from "./SkillsTitle";
 import { SkillsSectionContent } from "./SkillsSectionContent";
 import { LogoAstro, LogoBootstrap, LogoCss, LogoHtml, LogoJava, LogoJavaScript, LogoMongoDB, LogoNext, LogoNode, LogoReact, LogoSpring, LogoTailWindCss, LogoTypeScript, LogoVite } from "../Svg";
-import { CardSkill } from "./CardSkill";
 import { SkillSectionTabs } from "./SkillSectionTabs";
 interface Props {
   height?: string;

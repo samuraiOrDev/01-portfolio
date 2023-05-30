@@ -15,18 +15,18 @@ interface TypeAppProjects {
 }
 
 const Card: FC<TypeAppProjects> = ({ id, title, img, url, repo }) => (
-  <div className="flex-[1_0_250px] shadow-lg shadow-black m-[1rem] overflow-hidden rounded-[6px]">
+  <div className="flex-[1_0_250px] shadow-lg  m-[1rem] overflow-hidden rounded-lg shadow-black">
     <Image
       src={img}
       alt={title || "Image"}
       width={250}
       height={250}
       loading="lazy"
-      className="object-fill hover:scale-105 hover:shadow-l hover:bg-zinc-800 transition ease-in-out duration-300"
+      className="object-fill hover:scale-105 hover:bg-zinc-800 transition ease-in-out duration-300"
     />
 
-    <div className="flex justify-center items-center flex-row w-full p-6 gap-1 bg-zinc-800">
-      <div className="bg-gradient-to-r from-yellow-600 from-0%  to-purple-800 to-100% p-3 rounded flex items-center justify-center">
+    <div className="flex justify-center items-center flex-row w-full p-6 gap-1 bg-zinc-900">
+      <div className="bg-gradient-to-r from-yellow-600 from-0%  to-purple-800 to-100% p-3 rounded flex items-center justify-center cursor-pointer transition duration-300  hover:scale-105">
         <Link
           href={url}
           className="flex items-center justify-center h-full w-full text-white"
@@ -43,7 +43,7 @@ const Card: FC<TypeAppProjects> = ({ id, title, img, url, repo }) => (
           </svg>
         </Link>
       </div>
-      <div className="bg-gradient-to-r from-yellow-600 from-0%  to-purple-800 to-100% p-3 rounded flex items-center justify-center">
+      <div className="bg-gradient-to-r from-yellow-600 from-0%  to-purple-800 to-100% p-3 rounded flex items-center justify-center cursor-pointer transition duration-300  hover:scale-105">
         <Link
           href={repo}
           className="flex items-center justify-center h-full w-full text-white"
@@ -52,7 +52,7 @@ const Card: FC<TypeAppProjects> = ({ id, title, img, url, repo }) => (
           <BsGithub className="w-5 h-5" />
         </Link>
       </div>
-      <div className="bg-gradient-to-r from-yellow-600 from-0%  to-purple-800 to-100% p-3 rounded flex items-center justify-center">
+      <div className="bg-gradient-to-r from-yellow-600 from-0%  to-purple-800 to-100% p-3 rounded flex items-center justify-center cursor-pointer transition duration-300  hover:scale-105">
         <Link
           href={`http://localhost:3000/projects/${id}`}
           className="flex items-center justify-center h-full w-full text-white"
@@ -67,7 +67,7 @@ interface TypePropsCardContainer {
   cards: TypeAppProjects[];
 }
 const CardContainer: FC<TypePropsCardContainer> = ({ cards }) => (
-  <div className="flex rounded-[6px] p-[1rem] overflow-x-auto relative hide-scrollbar">
+  <div className="flex rounded-lg p-[1rem] overflow-x-auto relative hide-scrollbar">
     {cards.map((card) => (
       <Card {...card} key={card.id}/>
     ))}
@@ -76,7 +76,7 @@ const CardContainer: FC<TypePropsCardContainer> = ({ cards }) => (
 
 export const ProjectSectionCards = () => {
   return (
-    <div>
+    <div className="lg:w-auto sm:w-[720px] w-[300px] bg-zinc-900 rounded-xl shadow-pro-dark">
       <CardContainer cards={allProjects} />
     </div>
   );

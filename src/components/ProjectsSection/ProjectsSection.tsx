@@ -3,6 +3,8 @@ import { ProjectTitle } from "./ProjectTitle";
 import { ProjectsSectionContent } from "./ProjectsSectionContent";
 import { ProjectSectionTabs } from "./ProjectSectionTabs";
 import { ProjectSectionCards } from "./ProjectSectionCards";
+import { ElementH2 } from "../ui";
+import Link from "next/link";
 
 interface Props {}
 export const ProjectsSection: FC<Props> = () => {
@@ -14,6 +16,9 @@ export const ProjectsSection: FC<Props> = () => {
               <ProjectSectionTabs />
           </ProjectsSectionContent> */}
           <ProjectSectionCards />
+          <Link   href={'/projects'} className="mt-10 font-bold sm:text-[32px] sm:leading-[52px] text-[22px] leading-[36px] text-gradient-h1-reverse">
+            Todos los proyectos <span>→</span>
+          </Link>
         </div>
     </section>
   );
