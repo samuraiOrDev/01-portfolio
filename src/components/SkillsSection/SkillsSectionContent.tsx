@@ -16,7 +16,7 @@ export const SkillsSectionContent:FC<SkillsSectionContentProps> = ({children}) =
       );
   return (
     <motion.div
-      className="flex items-center justify-center xl:max-w-[1024px] w-full mt-6 mx-auto flex-wrap sm:border-dashed sm:border-yellow-600 sm:border-4 rounded-md h-auto relative p-12"
+      className="flex items-center justify-center xl:max-w-[1024px] w-full mt-6 mx-auto flex-wrap lg:border-dashed lg:border-yellow-600 lg:border-4 rounded-md h-auto relative lg:p-12"
       animate={controls as AnimationControls}
       ref={ref as RefUseAnimate["ref"]}
       initial={animateHeroSectionLeftInitialState}

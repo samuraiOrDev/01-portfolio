@@ -20,10 +20,10 @@ export const EducationSection = () => {
             <ElementH3 title='Cursos' education />
             <ListFaqsEducationSection />
             {/* Others */}
-            <ElementH3 title='En progreso' education />
+            {/* <ElementH3 title='En progreso' education />
             <EducationSectionContent>
               <EducationSectionContentProgress />
-            </EducationSectionContent>
+            </EducationSectionContent> */}
         </div>
     </section>
   )

@@ -85,13 +85,13 @@ export const SkillSectionTabs: FC = () => {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -10, opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="grid grid-cols-4 gap-1 p-1 mx-auto"
+            className="grid sm:grid-cols-4 grid-cols-3 gap-1 p-1 mx-auto"
           >
             {selectedTab && (
               selectedTab.elements.map(({
                 component: Component,
               }, index) => (
-                <div className="p-6 mx-auto  transition duration-300 ease-in-out cursor-pointer" key={index}>
+                <div className="p-6 mx-auto transition duration-300 ease-in-out cursor-pointer" key={index}>
                   <div className="w-[80px] h-[80px] mb-4 text-gray-400 border-2 border-dashed border-yellow-600 flex items-center justify-center rounded-full">
                     <Component  height="50"/>
                   </div>

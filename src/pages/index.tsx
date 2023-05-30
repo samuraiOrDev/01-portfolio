@@ -26,7 +26,7 @@ const HomePage: NextPage = () => {
       <AboutSection />
       <EducationSection />
       <SkillsSection />
-      <ProjectsSection />
+      {/* <ProjectsSection /> */}
       <ContactSection />
     </MainLayout>
   );
