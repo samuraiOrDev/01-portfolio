@@ -1,0 +1,14 @@
+.hero-section-height {
+  height: auto;
+}
+@media screen and (min-width: 1024px) {
+  .hero-section-height {
+    height: calc(100vh - 80px);
+  }
+}
+.text-gradient-h1 {
+  background: linear-gradient(90deg, rgb(202 138 4 /1) 2.34%, #420380 100.78%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
