@@ -509,3 +509,49 @@ export const skillsSection = {
   description:
     "Durante mi trayectoria profesional y estudiantil, he adquerido númerosos conocimientos tanto en el ámbito de la física como en el desarrollo de sofwate. A continuación, se muestran las tecnologías y habilidades que he adquirido/dominado durante todo este proceso",
 };
+
+export const allProjects = [
+  {
+    id: "frontend/1",
+    title: "Scroll Infinite",
+    img: "https://unsplash.it/200/200",
+    url: "https://scroll-infinite-react-js.vercel.app/",
+    repo: " ",
+  },
+  {
+    id: "frontend/2",
+    title: "Pokedex Next JS",
+    img: "https://unsplash.it/201/201",
+    url: "https://pokedex-next-js-seven.vercel.app/",
+    repo: "",
+  },
+  {
+    id: "frontend/3",
+    title: "To Do List React JS",
+    url: "https://tod-do-react.vercel.app/",
+    img: "https://unsplash.it/200/201",
+    repo: "https://github.com/samuraiOrDev/To-Do-React",
+    urlDescription: "#to-do-react",
+  },
+  {
+    id: "frontend/4",
+    title: "Animal Patient Manager React JS",
+    url: "https://animal-patient-manager.vercel.app/",
+    img: "https://unsplash.it/202/202",
+    repo: "https://github.com/samuraiOrDev/Animal-Patient-Manager",
+  },
+  {
+    id: "backend/1",
+    title: "Api Rest Pokemon Node JS",
+    img: "https://unsplash.it/202/200",
+    url: "https://backend-pokemon.vercel.app/pokemon/",
+    repo: " ",
+  },
+  {
+    id: "maquetacion/1",
+    title: "GameBoy Color",
+    img: "https://unsplash.it/200/201",
+    url: "https://gameboypikachu.netlify.app/",
+    repo: " ",
+  },
+];

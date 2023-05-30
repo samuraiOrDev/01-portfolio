@@ -12,8 +12,6 @@ import {
 import { CardCourse } from "./CardCourse";
 import { RefUseAnimate, useAnimate } from "@/hooks/useAnimate";
 
-const arrayCourses2 = arrayCourses.slice(0, 5);
-
 const ListFaqsEducationSection = () => {
   const [isOpen, setIsOpen] = useState(null);
   const toggleFAQ = (index: any) => {

@@ -4,19 +4,12 @@ import { CardProgress } from "./CardProgress";
 
 export const EducationSectionContentProgress = () => {
   return (
-    <div className="grid sm:grid-cols-4  xl:max-w-[920px] gap-3 mx-auto">
+    <ul className="grid sm:grid-cols-4 xl:max-w-[920px] gap-6 mx-auto list-disc text-yellow-600">
         {
             coursesCertificationsProgress.map((course) => (
-                <CardProgress
-                    key={course.id}
-                    title={course.title}
-                    porcentaje={course.porcentaje}
-                    bgColor={course.bgColor}
-                    textColor={course.textColor}
-                    to={course.to}
-                />
+              <li key={course.id}>{course.title}</li>
             ))
         }
-    </div>
+    </ul>
   );
 };
