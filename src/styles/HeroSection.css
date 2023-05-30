@@ -1,6 +1,6 @@
-.hero-section-height {
+/* .hero-section-height {
   height: auto;
-}
+} */
 @media screen and (min-width: 1024px) {
   .hero-section-height {
     height: calc(100vh - 80px);

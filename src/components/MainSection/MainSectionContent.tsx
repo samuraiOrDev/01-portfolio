@@ -19,7 +19,7 @@ export const MainSectionContent: FC<Props> = () => {
   );
   return (
     <motion.div
-      className="flex items-center justify-center xl:max-w-[1024px] w-full mt-12 mx-auto flex-wrap sm:border-dashed sm:border-yellow-600 sm:border-4 rounded-md sm:h-[500px] h-auto relative"
+      className="flex items-center justify-center xl:max-w-[1024px] w-full mt-12 mx-auto flex-wrap lg:border-dashed lg:border-yellow-600 lg:border-4 rounded-md lg:h-[500px] h-auto relative"
       ref={ref as RefUseAnimate["ref"]}
       animate={controls as AnimationControls}
       initial={animateMainSectionInitialStateContent}
@@ -29,7 +29,7 @@ export const MainSectionContent: FC<Props> = () => {
       <ElementBorder bottom left />
       <ElementBorder bottom right />
       {/* <div className="flex items-center justify-center flex-wrap sm:flex-row flex-col xl:max-w-[900px] w-full gap-3 mx-auto"> */}
-      <div className="grid grid-rows-2 grid-flow-col xl:max-w-[720px] w-full gap-3 mx-auto">
+      <div className="grid sm:grid-rows-2 grid-rows-1 sm:grid-flow-col xl:max-w-[720px] w-full gap-3 mx-auto">
         {cardsMainSection.map((card, index) => (
           <MainCardItem
             key={index}
