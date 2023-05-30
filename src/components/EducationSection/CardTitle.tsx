@@ -22,14 +22,12 @@ export const CardTitle:FC<TypeEducation> = ({ id,  title, date, description, tag
         mx-auto 
         cursor-pointer 
         flex 
-        sm:flex-row 
-        flex-col
-        sm:mb-0
+        lg:mb-0
         first:mb-4
         justify-center 
-        md:flex-col 
-        md:justify-between 
-        items-start
+        flex-col 
+        lg:justify-between 
+        lg:items-start
         p-6 
         transition
         duration-300
@@ -37,7 +35,8 @@ export const CardTitle:FC<TypeEducation> = ({ id,  title, date, description, tag
         hover:scale-105
         hover:shadow-lg
       hover:bg-zinc-800
-        h-[250px]
+        lg:h-[250px]
+        h-auto
         ">
             <div className="flex gap-x-3 gap-y-2 mb-4 md:mb-2 flex-wrap items-center justify-start">
                 {

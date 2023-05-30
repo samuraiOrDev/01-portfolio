@@ -50,12 +50,12 @@ const ListFaqsEducationSection = () => {
   };
   return (
     <motion.div
-      className="flex items-center justify-center xl:max-w-[1024px] w-full mt-[-30px] mx-auto flex-wrap h-auto relative p-12"
+      className="flex items-center justify-center xl:max-w-[1024px] w-full mt-[-30px] mx-auto flex-wrap h-auto relative sm:p-12"
       animate={controls as AnimationControls}
       ref={ref as RefUseAnimate["ref"]}
       initial={animateHeroSectionLeftInitialState}
     >
-      <div className="xl:max-w-[920px] w-full gap-3 mx-auto cursor-pointer">
+      <div className="xl:max-w-[920px] w-full gap-3 mx-auto cursor-pointer mt-12 sm:mt-0">
         <div>
           {arrayListCourses.map((faq, index) => {
             return (
@@ -65,13 +65,13 @@ const ListFaqsEducationSection = () => {
                   onClick={() => toggleFAQ(index)}
                   className={`px-3 py-3 border-yellow-600 ${
                     isOpen === index ? "border-b-[0px]" : ""
-                  } border-2 border-dashed last:mb-4 flex justify-between items-center text-yellow-600 text-xl`}
+                  } border-2 border-dashed last:mb-4 flex justify-between items-center text-yellow-600 sm:text-xl text-[16px]`}
                 >
                   {faq.title}
                   {isOpen === index ? (
-                    <AiOutlineMinus className="text-yellow-600 h-[30px] w-[30px] border-yellow-600 border-2 rounded-full" />
+                    <AiOutlineMinus className="text-yellow-600 h-[30px] w-[30px] border-yellow-600 lg:border-2 rounded-full cursor-pointer" />
                   ) : (
-                    <BsPlus className="text-yellow-600 h-[30px] w-[30px] border-yellow-600 border-2 rounded-full" />
+                    <BsPlus className="text-yellow-600 h-[30px] w-[30px] border-yellow-600 lg:border-2 rounded-full cursor-pointer" />
                   )}
                 </motion.div>
                 <AnimatePresence>
