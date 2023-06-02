@@ -1,18 +1,20 @@
 import React, { FC, useState } from "react";
 
-export interface Ingredient {
-  icon: string;
-  label: string;
-}
-
-export const allIngredients = [
+export const allSkills = [
   {
-    title: "Frontend",
+    title: "Lenguajes",
     elements: [
       { component: LogoJavaScript, title: "JavaScript" },
       { component: LogoTypeScript, title: "TypeScript" },
       { component: LogoHtml, title: "Html" },
       { component: LogoCss, title: "Css" },
+      { component: LogoJava, title: "Java" },
+      { component: LogoPython, title: "Python" },
+    ]
+  },
+  {
+    title: "Frontend",
+    elements: [
       { component: LogoVite, title: "Vite JS" },
       { component: LogoAstro, title: "Astro" },
       { component: LogoReact, title: "React" },
@@ -27,11 +29,18 @@ export const allIngredients = [
     title: "Backend",
     elements: [
       { component: LogoNode, title: "NodeJs" },
-      { component: LogoJava, title: "Java" },
       { component: LogoSpring, title: "Spring" },
+      { component: LogoExpress, title: "Express" },
+      { component: LogoDjango, title: "Django"}
     ],
   },
-  { title: "BbDd", elements: [{ component: LogoMongoDB, title: "MongoDB" }] },
+  { title: "BbDd", 
+    elements: [
+      { component: LogoMongoDB, title: "MongoDB" },
+      { component: LogoMySql, title: "MySQL" },
+      { component: LogoSqLite, title: "SQLite"  },
+      { component: LogoPostgresql, title: "PostgreSQL"}
+  ] },
 ];
 
 // Packages Third
@@ -40,36 +49,34 @@ import {
   LogoAstro,
   LogoBootstrap,
   LogoCss,
+  LogoDjango,
   LogoEslint,
+  LogoExpress,
   LogoHtml,
   LogoJQuery,
   LogoJava,
   LogoJavaScript,
   LogoMongoDB,
+  LogoMySql,
   LogoNext,
   LogoNode,
+  LogoPostgresql,
+  LogoPython,
   LogoReact,
   LogoSpring,
+  LogoSqLite,
   LogoTailWindCss,
   LogoTypeScript,
   LogoVite,
 } from "../Svg";
 
 export const SkillSectionTabs: FC = () => {
-  const [selectedTab, setSelectedTab] = useState(allIngredients[0]);
+  const [selectedTab, setSelectedTab] = useState(allSkills[0]);
   return (
     <div className="bg-zinc-900 rounded-lg xl:max-w-[1024px] w-full flex flex-col md:flex-row gap-y-5 md:gap-x-3 md:flex-wrap justify-center">
       <ul className="flex items-center justify-center p-3 w-full gap-6">
-        {allIngredients.map((item) => (
-          <li
-            key={item.title}
-            className={`cursor-pointer font-bold text-[20px] ${
-              item === selectedTab
-                ? "text-yellow-600 border-b-2 border-yellow-600"
-                : ""
-            }`}
-            onClick={() => setSelectedTab(item)}
-          >
+        {allSkills.map((item) => (
+          <li key={item.title} className={`cursor-pointer font-bold sm:text-[20px] text-[16px] ${item === selectedTab ? "text-yellow-600 border-b-2 border-yellow-600" : ""}`}onClick={() => setSelectedTab(item)}>
             {`${item.title}`}
             {item === selectedTab ? (
               <motion.div className="underline" layoutId="underline" />

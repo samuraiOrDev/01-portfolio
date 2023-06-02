@@ -12,8 +12,9 @@ import {
   SkillsSection,
   ContactSection,
   MainLayout,
+  ExperienceSection,
+  ProjectsSection
 } from "@/components";
-import { ProjectsSection } from "@/components/ProjectsSection";
 import { frontMatter } from "@/data/config";
 
 
@@ -24,6 +25,7 @@ const HomePage: NextPage = () => {
       <HeroSection />
       <MainSection />
       <AboutSection />
+      <ExperienceSection />
       <EducationSection />
       <SkillsSection />
       <ProjectsSection />

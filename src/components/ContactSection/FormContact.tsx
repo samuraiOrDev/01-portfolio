@@ -1,8 +1,11 @@
 import React from "react";
-
 export const FormContact = () => {
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    console.log(e.target)
+  }
   return (
-    <form className="mt-6 w-full md:w-1/2">
+    <form className="mt-6 w-full md:w-1/2" onSubmit={handleSubmit}>
       <div className="mb-6">
         <label
           htmlFor="name"
@@ -47,10 +50,7 @@ export const FormContact = () => {
           placeholder="Deje su comentario..."
         ></textarea>
       </div>
-      <button
-        type="submit"
-        className="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center bg-yellow-600"
-      >
+      <button type="submit" className="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center bg-yellow-600">
         Enviar
       </button>
     </form>

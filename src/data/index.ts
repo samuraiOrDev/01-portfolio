@@ -120,15 +120,139 @@ export const aboutMeSection = {
 
 export const educationSection = {
   title: "Educación",
-  // parrafos: [
-  //   "Uno de mis mayores logros académicos ha sido obtener el título de grado en Física de la Universidad de Extremadura",
-  //   "Además de esta titulación, he realizado numerosos cursos enfocados en el desarrollo web, lo que me ha permitido adquirir experiencia como FullStack en diversas tecnologías y frameworks",
-  //   "También he participado en cursos relacionados con el aprendizaje automático (machine learning)",
-  //   "Actualmente, me encuentro en proceso de obtener la certificación de AEM Site, lo cual representa un nuevo desafío en mi trayectoria profesional",
-  // ],
   description:
     "Uno de mis mayores logros académicos ha sido obtener el graduado en Física de la Universidad de Extremadura. Además de esta titulación, he realizado numerosos cursos enfocados en el desarrollo web y en el aprendizaje automático. Actualmente, sigo realizando gran cantidad de curso y certificaciones para seguir creciendo como profesional",
 };
+export interface ExperienceTag {
+  name: string;
+  bg: string;
+  textColor: string;
+}
+export interface Experience {
+  id: number;
+  job: string;
+  date: string;
+  project: string;
+  tags: ExperienceTag[];
+}
+export const experience = [
+  {
+    id: 2,
+    job: "Developer, Viewnext S.A",
+    date: "Agosto 2021 - Deciembre 2022",
+    project: "Proyecto SAC F.O.Digital + Portales + Movilidad LEAN",
+    tags: [
+      {
+        name: "Java",
+        bg: "rgb(30 58 138)",
+        textColor: "rgb(147 197 253)",
+      },
+      {
+        name: "Jsp",
+        bg: "rgb(55 65 81)",
+        textColor: "rgb(209 213 219)",
+      },
+      {
+        name: "Html",
+        bg: "rgb(127 29 29)",
+        textColor: "rgb(252 165 165)",
+      },
+      {
+        name: "Css",
+        bg: "rgb(20 83 45)",
+        textColor: "rgb(134 239 172)",
+      },
+      {
+        name: "Javascript",
+        bg: "rgb(20 83 45)",
+        textColor: "rgb(134 239 172)",
+      },
+      {
+        name: "Owcs",
+        bg: "rgb(6 95 70)",
+        textColor: "rgb(110 231 183)",
+      },
+      {
+        name: "...",
+        bg: "bg-transparent",
+      },
+    ],
+  },
+  {
+    id: 3,
+    job: "Developer, Viewnext S.A",
+    date: "Diciembre 2022 - Actualidad",
+    project: "Proyecto SAC F.O.Digital + Portales + Movilidad LEAN",
+    tags: [
+      {
+        name: "Spring",
+        bg: "rgb(30 58 138)",
+        textColor: "rgb(147 197 253)",
+      },
+      {
+        name: "Thymeleaf",
+        bg: "rgb(55 65 81)",
+        textColor: "rgb(209 213 219)",
+      },
+      {
+        name: "Oracle Sql",
+        bg: "rgb(20 83 45)",
+        textColor: "rgb(134 239 172)",
+      },
+      {
+        name: "JPA",
+        bg: "rgb(107 33 168)",
+        textColor: "rgb(216 180 254)",
+      },
+      {
+        name: "Hibernate",
+        bg: "rgb(133 77 14)",
+        textColor: "rgb(253 224 71)",
+      },
+      {
+        name: "...",
+        bg: "bg-transparent",
+      },
+    ],
+  },
+  {
+    id: 1,
+    job: " I+D, eCapure3D S.L",
+    date: "Abril 2021 - Junio 2021",
+    project: "Algoritmos predictivos y análisis de datos (Prácticas).",
+    tags: [
+      {
+        name: "Python",
+        bg: "rgb(30 58 138)",
+        textColor: "rgb(147 197 253)",
+      },
+      {
+        name: "Numpy",
+        bg: "rgb(107 33 168)",
+        textColor: "rgb(216 180 254)",
+      },
+      {
+        name: "Pandas",
+        bg: "rgb(20 83 45)",
+        textColor: "rgb(134 239 172)",
+      },
+      {
+        name: "Scikit",
+        bg: "rgb(127 29 29)",
+        textColor: "rgb(252 165 165)",
+      },
+      {
+        name: "Postgresql",
+        bg: "rgb(55 65 81)",
+        textColor: "rgb(209 213 219)",
+      },
+      {
+        name: "...",
+        bg: "bg-transparent",
+      },
+    ],
+  },
+].sort((a, b) => b.id - a.id);
 
 export const educationSectionCards = [
   {
@@ -509,7 +633,11 @@ export const skillsSection = {
   description:
     "Durante mi trayectoria profesional y estudiantil, he adquerido númerosos conocimientos tanto en el ámbito de la física como en el desarrollo de sofwate. A continuación, se muestran las tecnologías y habilidades que he adquirido/dominado durante todo este proceso",
 };
-
+export const expeienceSection = {
+  title: "Experiencia",
+  description:
+    "Tengo alrededor de 2 años de experiencia trabajando en proyectos tanto de frontend como de backend, además de un breve período, de dos  meses, en el que me dediqué a proyectos de machine learning",
+};
 export const allProjects = [
   {
     id: "frontend/1",

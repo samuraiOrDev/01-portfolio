@@ -1,5 +1,6 @@
 export const frontMatter = {
-  title: "Portfolio | Samurai.Dev.Ord",
-  description: "Portfolio del desarrollador web Samurai.Dev.Ord",
+  title: "WebPersonal | Samurai.Dev.Ord",
+  description:
+    "WebPersonal del desarrollador web FullStack Samurai.Dev.Ord. En ella podrás encontrar información sobre mi, mis proyectos y mis redes sociales. ¡Bienvenido!",
   author: "Víctor Manuel Ordiales García",
 };

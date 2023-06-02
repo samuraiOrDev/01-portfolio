@@ -1,4 +1,3 @@
-import React, { FC } from "react";
 import { AnimationControls, motion } from "framer-motion";
 
 // components & data
@@ -11,8 +10,7 @@ import {
 import { RefUseAnimate, useAnimate } from "@/hooks/useAnimate";
 import { MainCardItem } from "./MainCardItem";
 
-interface Props {}
-export const MainSectionContent: FC<Props> = () => {
+export const MainSectionContent = () => {
   const [ref, controls] = useAnimate(
     animateMainSectionContent,
     animateMainSectionInitialStateContent

@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 
-import { FaUserGraduate } from "react-icons/fa";
 import { ElementH3, ElementP } from "../ui";
 import type { IconType } from "react-icons";
 import Link from "next/link";
@@ -40,19 +39,13 @@ export const MainCardItem: FC<Props> = ({
                 relative
                 "
     >
-      <div
-        className={`flex items-center justify-center h-[50px] w-[50px] rounded-full`}
-        style={{ backgroundColor: bgIcon }}
-      >
+      <div className={`flex items-center justify-center h-[50px] w-[50px] rounded-full`} style={{ backgroundColor: bgIcon }}>
         <Icon className="text-white text-[25px]" />
       </div>
       <ElementH3 title={title} />
       <ElementP description={description} card />
 
-      <Link
-        href={to}
-        className="inline-flex items-center text-yellow-600 hover:underline mt-2"
-      >
+      <Link href={to} className="inline-flex items-center text-yellow-600 hover:underline mt-2">
         Leer más
         <svg
           className="w-5 h-5 ml-2"

@@ -2,20 +2,26 @@ import React, { FC } from "react";
 
 // Components
 import { ElementBorder } from "../ui";
-import {
-  animateHeroBanner,
-  animateHeroSectionRightInitialState,
-} from "@/data";
+import { animateHeroBanner, animateHeroSectionRightInitialState, animateHeroSectionLeftInitialState } from "@/data";
 import { RefUseAnimate, useAnimate } from "@/hooks/useAnimate";
 import { AnimationControls, motion } from "framer-motion";
 
-interface EducationSectionContentProps {
+interface SectionContentProps {
   children: React.ReactNode;
+  left?: boolean;
+  colorViolet?: boolean;
 }
-export const EducationSectionContent:FC<EducationSectionContentProps> = ({children}) => {
+export const SectionContent: FC<SectionContentProps> = ({
+  children,
+  left = false,
+  colorViolet = false,
+}) => {
+    let animate = animateHeroSectionRightInitialState;
+    if (left) animate = animateHeroSectionLeftInitialState;
+    
   const [ref, controls] = useAnimate(
     animateHeroBanner,
-    animateHeroSectionRightInitialState
+    animate
   );
   return (
     <motion.div
@@ -24,10 +30,10 @@ export const EducationSectionContent:FC<EducationSectionContentProps> = ({childr
       ref={ref as RefUseAnimate["ref"]}
       initial={animateHeroSectionRightInitialState}
     >
-      <ElementBorder top left />
-      <ElementBorder top right />
-      <ElementBorder bottom left />
-      <ElementBorder bottom right />
+      <ElementBorder top left  colorViolet={colorViolet}/>
+      <ElementBorder top right  colorViolet={colorViolet}/>
+      <ElementBorder bottom left  colorViolet={colorViolet}/>
+      <ElementBorder bottom right  colorViolet={colorViolet}/>
       {children}
     </motion.div>
   );

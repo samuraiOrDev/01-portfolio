@@ -53,6 +53,7 @@ export const MainLayout: FC<TypeMainLayout> = ({
           content={description}
         />
         <meta property="og:site_name" content="PortFolio | Samurai.Dev.Ord" />
+        <meta name="robots" content="noindex" />
       </Head>
       <div className={`bg-gray-950 text-[#A3B3BC] ${font}`}>
         <NavBar itemsListNavBar={itemsListNavBar} />

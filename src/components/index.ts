@@ -11,3 +11,5 @@ export * from "./SkillsSection";
 export * from "./Svg";
 export * from "./ContactSection";
 export * from "./Layouts";
+export * from "./ProjectsSection";
+export * from "./ExperienceSection";
