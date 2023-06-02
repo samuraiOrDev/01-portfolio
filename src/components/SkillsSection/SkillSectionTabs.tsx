@@ -10,7 +10,7 @@ export const allSkills = [
       { component: LogoCss, title: "Css" },
       { component: LogoJava, title: "Java" },
       { component: LogoPython, title: "Python" },
-    ]
+    ],
   },
   {
     title: "Frontend",
@@ -21,8 +21,8 @@ export const allSkills = [
       { component: LogoNext, title: "Next JS" },
       { component: LogoTailWindCss, title: "Tailwind CSS" },
       { component: LogoBootstrap, title: "Bootstrap" },
-      { component: LogoEslint, title: "Eslint"},
-      { component: LogoJQuery, title: "JQuery"}
+      { component: LogoEslint, title: "Eslint" },
+      { component: LogoJQuery, title: "JQuery" },
     ],
   },
   {
@@ -31,16 +31,18 @@ export const allSkills = [
       { component: LogoNode, title: "NodeJs" },
       { component: LogoSpring, title: "Spring" },
       { component: LogoExpress, title: "Express" },
-      { component: LogoDjango, title: "Django"}
+      { component: LogoDjango, title: "Django" },
     ],
   },
-  { title: "BbDd", 
+  {
+    title: "BbDd",
     elements: [
       { component: LogoMongoDB, title: "MongoDB" },
       { component: LogoMySql, title: "MySQL" },
-      { component: LogoSqLite, title: "SQLite"  },
-      { component: LogoPostgresql, title: "PostgreSQL"}
-  ] },
+      { component: LogoSqLite, title: "SQLite" },
+      { component: LogoPostgresql, title: "PostgreSQL" },
+    ],
+  },
 ];
 
 // Packages Third
@@ -74,9 +76,17 @@ export const SkillSectionTabs: FC = () => {
   const [selectedTab, setSelectedTab] = useState(allSkills[0]);
   return (
     <div className="bg-zinc-900 rounded-lg xl:max-w-[1024px] w-full flex flex-col md:flex-row gap-y-5 md:gap-x-3 md:flex-wrap justify-center">
-      <ul className="flex items-center justify-center p-3 w-full gap-6">
+      <ul className="flex items-center justify-center p-3 w-full sm:gap-6 gap-2">
         {allSkills.map((item) => (
-          <li key={item.title} className={`cursor-pointer font-bold sm:text-[20px] text-[16px] ${item === selectedTab ? "text-yellow-600 border-b-2 border-yellow-600" : ""}`}onClick={() => setSelectedTab(item)}>
+          <li
+            key={item.title}
+            className={`cursor-pointer font-bold sm:text-[20px] text-[16px] ${
+              item === selectedTab
+                ? "text-yellow-600 border-b-2 border-yellow-600"
+                : ""
+            }`}
+            onClick={() => setSelectedTab(item)}
+          >
             {`${item.title}`}
             {item === selectedTab ? (
               <motion.div className="underline" layoutId="underline" />
@@ -94,17 +104,17 @@ export const SkillSectionTabs: FC = () => {
             transition={{ duration: 0.2 }}
             className="grid sm:grid-cols-4 grid-cols-3 gap-1 p-1 mx-auto"
           >
-            {selectedTab && (
-              selectedTab.elements.map(({
-                component: Component,
-              }, index) => (
-                <div className="p-6 mx-auto transition duration-300 ease-in-out cursor-pointer" key={index}>
+            {selectedTab &&
+              selectedTab.elements.map(({ component: Component }, index) => (
+                <div
+                  className="p-3 mx-auto transition duration-300 ease-in-out cursor-pointer"
+                  key={index}
+                >
                   <div className="w-[80px] h-[80px] mb-4 text-gray-400 border-2 border-dashed border-yellow-600 flex items-center justify-center rounded-full">
-                    <Component  height="50"/>
+                    <Component height="50" />
                   </div>
-               </div>
-              ))
-            )}
+                </div>
+              ))}
           </motion.div>
         </AnimatePresence>
       </main>
