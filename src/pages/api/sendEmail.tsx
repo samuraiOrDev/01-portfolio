@@ -106,7 +106,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     if (result.success) {
       return res
         .status(200)
-        .json({ message: "Correo electrónico enviado", name, email, subject });
+        .json({ message: "Correo electrónico enviado" });
     } else {
       return res
         .status(500)
