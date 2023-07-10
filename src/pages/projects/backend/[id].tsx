@@ -1,4 +1,4 @@
-import { Footer, Layout, NavBar } from '@/components'
+import { Footer, ProjectsLayouts, NavBar } from '@/components'
 import React from 'react'
 import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
@@ -8,11 +8,11 @@ const itemsListNavBar = [
 ];
 const Project = () => {
   return (
-    <Layout  title={'Project | Víctor Manuel'} description={''} font={inter.className} >
+    <ProjectsLayouts  title={'Project | Víctor Manuel'} description={''} font={inter.className} >
         <NavBar itemsListNavBar={itemsListNavBar}/>
         <h1>Project | Víctor Manuel Ordiales García</h1>
         <Footer />
-    </Layout>
+    </ProjectsLayouts>
   )
 }
 
