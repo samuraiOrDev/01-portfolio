@@ -2,7 +2,6 @@ import Head from "next/head";
 import React, { FC } from "react";
 import { useRouter } from "next/router";
 
-// Components
 import { NavBar } from "../NavBar";
 import { Footer } from "../Footer";
 

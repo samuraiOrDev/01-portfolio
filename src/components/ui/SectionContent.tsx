@@ -1,7 +1,4 @@
 import React, { FC } from "react";
-
-// Components
-import { ElementBorder } from "../ui";
 import { animateHeroBanner, animateHeroSectionRightInitialState, animateHeroSectionLeftInitialState } from "@/data";
 import { RefUseAnimate, useAnimate } from "@/hooks/useAnimate";
 import { AnimationControls, motion } from "framer-motion";
@@ -30,10 +27,6 @@ export const SectionContent: FC<SectionContentProps> = ({
       ref={ref as RefUseAnimate["ref"]}
       initial={animateHeroSectionRightInitialState}
     >
-      <ElementBorder top left  colorViolet={colorViolet}/>
-      <ElementBorder top right  colorViolet={colorViolet}/>
-      <ElementBorder bottom left  colorViolet={colorViolet}/>
-      <ElementBorder bottom right  colorViolet={colorViolet}/>
       {children}
     </motion.div>
   );
