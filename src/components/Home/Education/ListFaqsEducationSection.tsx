@@ -94,7 +94,7 @@ const ListFaqsEducationSection = () => {
         <div className="flex justify-center items-center">
           <button
             className="px-3 py-2  border-yellow-600  text-yellow-600 text-xl flex items-center justify-center"
-            onClick={handleCountPrev}
+            onClick={handleCountPrev} id="countPrev"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -119,6 +119,7 @@ const ListFaqsEducationSection = () => {
           <button
             className="px-3 py-2  border-yellow-600  text-yellow-600 text-xl  flex items-center justify-center"
             onClick={handleCountNext}
+            id="countNext"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

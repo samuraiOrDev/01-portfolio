@@ -7,7 +7,7 @@ export const heroSectionText = {
   supTitle: "Hola, soy",
   title: "Víctor Manuel",
   subTitle: "Ordiales García",
-  descriptionSup: "Desarrollador web Full Stack y graduado en Física",
+  descriptionSup: "Desarrollador Web Full Stack y graduado en Física",
   descriptionSub:
     "Me considero amante de las nuevas tecnologías, del desarrollo de software y de la Física de Partículas.",
 };
@@ -92,7 +92,7 @@ export const cardsMainSection = [
   },
   {
     title: "Proyectos",
-    description: "Información sobre mis proyectos destacados y personales",
+    description: "Información sobre mis proyectos personales",
     icon: AiOutlineProject,
     bgIcon: "#8f1f0d",
     to: "#projects-section",

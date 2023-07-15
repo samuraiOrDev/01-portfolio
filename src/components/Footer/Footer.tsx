@@ -38,7 +38,7 @@ export const Footer:FC<Props> = () => {
                     }
                 </div>
                 <div className='flex flex-1 justify-end items-start'>
-                    <p className='sx:text-[18px] xs:leading-[22px] text-[16px] leading-[20px] font-bold md:text-left text-centertext-[#A3B3BC]'>Copyright @ 2023 Samura.Dev.Ord</p>
+                    <p className='sx:text-[18px] xs:leading-[22px] text-[16px] leading-[20px] font-bold md:text-left text-centertext-[#A3B3BC]'>Copyright @ 2023 Samuraior.dev</p>
                 </div>
             </div>
     </footer>
