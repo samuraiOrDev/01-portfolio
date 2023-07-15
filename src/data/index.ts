@@ -108,7 +108,7 @@ export const cardsMainSection = [
 
 export const aboutMeSection = {
   title: "Conóceme:",
-  subTitle: "Samurai.Dev.Ord",
+  subTitle: "SamuraiOr.Dev",
   parrafos: [
     "¡Hola! Soy Víctor Manuel Ordiales García, un apasionado del desarrollo web y la física. Mi experiencia y formación en ambas disciplinas me han permitido desarrollar habilidades únicas que me permiten abordar problemas de manera innovadora y creativa",
     "Como graduado en física, tengo una comprensión sólida de los principios matemáticos y científicos que rigen el mundo que nos rodea. Esta base sólida me ha permitido tener una perspectiva única en el mundo del desarrollo web, lo que me ha permitido resolver problemas complejos con una comprensión profunda y detallada",

@@ -27,10 +27,10 @@ export const MainLayout: FC<TypeMainLayout> = ({
       : "";
   const canonicalURL = `${origin}${pathname}`;
   const itemsListNavBar = [
-    { title: "Inicio", to: "#hero-section", },
-    { title: "Sobre mí", to: "#about-section", },
+    { title: "Inicio", to: "#hero-section" },
+    { title: "Sobre mí", to: "#about-section" },
     { title: "Contacto", to: "#contact-section" },
-    { title: "Proyectos", to: "/projects" },
+    { title: "Proyectos", to: "#projects-section" },
   ];
   return (
     <>
