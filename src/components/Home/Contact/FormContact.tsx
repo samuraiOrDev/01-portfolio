@@ -49,14 +49,15 @@ export const FormContact = () => {
     <>
       {!isEmailSucess && !isEmailWrong && (
         <form className="mt-6 w-full md:w-1/2" onSubmit={formik.handleSubmit}>
-          <Input id="name" type="text" title="Nombre:" formik={formik} />
+          <Input id="name" type="text" title="Nombre:" formik={formik}  placeholder="John Doe"/>
           <Input
             id="email"
             type="email"
             title="Correo electrónico:"
             formik={formik}
+            placeholder="example@gmail.com"
           />
-          <Input id="subject" type="text" title="Asunto:" formik={formik} />
+          <Input id="subject" type="text" title="Asunto:" formik={formik} placeholder="Asunto/Cuestión/Motivo"/>
           <div className="mb-6">
             <label
               htmlFor="message"
@@ -71,7 +72,7 @@ export const FormContact = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.message}
-              className="block p-2.5 w-full text-sm rounded-lg border bg-gray-950 border-yellow-600 placeholder-yellow-600 text-white focus:ring-yellow-600 focus:border-yellow-500"
+              className="block p-2.5 w-full text-sm rounded-lg border bg-gray-950 border-yellow-600 placeholder-yellow-600/40 text-yellow-600 focus:ring-yellow-600 focus:border-yellow-500 outline-none"
               placeholder="Deje su comentario..."
             ></textarea>
             {formik.touched.message && formik.errors.message ? (

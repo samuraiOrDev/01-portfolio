@@ -5,8 +5,9 @@ interface Props {
   title: string;
   type: string;
   formik: any;
+  placeholder?: string;
 }
-export const Input: FC<Props> = ({ id, type, title, formik }) => {
+export const Input: FC<Props> = ({ id, type, title, formik, placeholder = '' }) => {
   return (
     <div className="mb-6">
       <label htmlFor={id} className="block mb-2 text-sm font-medium text-white">
@@ -19,8 +20,8 @@ export const Input: FC<Props> = ({ id, type, title, formik }) => {
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
         value={formik.values[`${id}`]}
-        className="border text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-full p-2.5 bg-gray-950 border-yellow-600 placeholder-yellow-600 text-white outline-none"
-        placeholder={title}
+        className="border text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-full p-2.5 bg-gray-950 border-yellow-600 placeholder-yellow-600/40 text-yellow-600 outline-none"
+        placeholder={placeholder}
       />
       {formik.touched[`${id}`] && formik.errors[`${id}`] ? (
         <div className="text-[14px] mt-1 text-red-600">
