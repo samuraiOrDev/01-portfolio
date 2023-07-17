@@ -649,17 +649,16 @@ export const allProjects = [
   {
     id: "frontend/2",
     title: "Pokedex Next JS",
-    img: "https://unsplash.it/201/201",
-    url: "https://pokedex-next-js-seven.vercel.app/",
-    repo: "",
+    img: "/img/pokedex.png",
+    url: "https://pokedex-roan-alpha.vercel.app/",
+    repo: "https://github.com/samuraiOrDev/pokedex/",
   },
   {
     id: "frontend/3",
     title: "To Do List React JS",
     url: "https://tod-do-react.vercel.app/",
-    img: "https://unsplash.it/200/201",
+    img: "/img/toDoReact.png",
     repo: "https://github.com/samuraiOrDev/To-Do-React",
-    urlDescription: "#to-do-react",
   },
   {
     id: "frontend/4",
@@ -678,8 +677,8 @@ export const allProjects = [
   {
     id: "maquetacion/1",
     title: "GameBoy Color",
-    img: "https://unsplash.it/200/201",
-    url: "https://gameboypikachu.netlify.app/",
-    repo: " ",
+    img: "/img/gameboy.png",
+    url: "https://gameboy-color.vercel.app/",
+    repo: "https://github.com/samuraiOrDev/gameboy-color",
   },
 ];
