@@ -1,7 +1,6 @@
 import Head from "next/head";
 import React, { FC } from "react";
 import { useRouter } from "next/router";
-
 import { NavBar } from "../NavBar";
 import { Footer } from "../Footer";
 
@@ -27,10 +26,9 @@ export const MainLayout: FC<TypeMainLayout> = ({
       : "";
   const canonicalURL = `${origin}${pathname}`;
   const itemsListNavBar = [
-    { title: "Inicio", to: "#hero-section" },
-    { title: "Sobre mí", to: "#about-section" },
-    { title: "Contacto", to: "#contact-section" },
-    { title: "Proyectos", to: "#projects-section" },
+    { title: "Inicio", to: "/" },
+    { title: "Proyectos", to: "/projects" },
+    { title: "Blog", to: "/blog" },
   ];
   return (
     <>
@@ -38,7 +36,7 @@ export const MainLayout: FC<TypeMainLayout> = ({
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Next.js 13" />
+        <meta name="generator" content="Next.js 13.4.3" />
         <meta name="author" content={author} />
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href={canonicalURL} />

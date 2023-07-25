@@ -9,7 +9,6 @@ interface Props {
   itemsListNavBar: TypeItemsListNavBar[];
 }
 export const ItemsNavBar: FC<Props> = ({ itemsListNavBar }) => {
-  
   return (
     <div className="flex justify-center items-center gap-3">
       {itemsListNavBar.map(({ title, to }, index) => (

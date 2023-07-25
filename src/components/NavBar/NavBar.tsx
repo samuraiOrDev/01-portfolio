@@ -2,7 +2,6 @@ import { FC, useContext, useEffect } from "react";
 //Components
 import { LogoPrincipal } from "./Logo";
 import { ItemsNavBar, TypeItemsListNavBar } from "./ItemsNavBar";
-import { useRouter } from "next/router";
 interface Props {
   itemsListNavBar: TypeItemsListNavBar[];
 }

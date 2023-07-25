@@ -682,3 +682,64 @@ export const allProjects = [
     repo: "https://github.com/samuraiOrDev/gameboy-color",
   },
 ];
+
+export interface TypeDescriptionBlog {
+  id: number;
+  title: string;
+  description: string;
+  img: string;
+  to: string;
+}
+
+export const descriptionBlog: TypeDescriptionBlog[] = [
+  {
+    id: 1,
+    title: "Introducción a JavaScript",
+    description: "Artículo a modo de introducción sobre JavaScript.",
+    img: "https://img.freepik.com/vector-gratis/programadores-que-utilizan-lenguaje-programacion-javascript-computadora-gente-pequena-lenguaje-javascript-motor-javascript-concepto-desarrollo-web-js-ilustracion-aislada-violeta-vibrante-brillante_335657-986.jpg?w=1380&t=st=1690316761~exp=1690317361~hmac=2ee7b5da73f7dbc463c4d7e35afc94a3a971d20a3abeca9a6bc4dc0f8b5de361",
+    to: "#java-script",
+  },
+  {
+    id: 2,
+    title: "Introducción a CSS",
+    description: "Artículo a modo de introducción sobre CSS.",
+    img: "https://img.freepik.com/vector-gratis/concepto-programadores-diseno-plano_23-2147852753.jpg?w=1380&t=st=1690316921~exp=1690317521~hmac=8e78eba8b582d78f8a8d547cb46b355908680f257921881593d5ac70ae180128",
+    to: "#css",
+  },
+  {
+    id: 3,
+    title: "Introducción a HTML",
+    description: "Artículo a modo de introducción sobre HTML.",
+    img: "https://img.freepik.com/foto-gratis/sistema-html-concepto-sitios-web_23-2150323546.jpg?w=1380&t=st=1690317005~exp=1690317605~hmac=391bde14edbc25266b85a8d491a753d1c158bd3ba53871bd409c25565fc63a23",
+    to: "#html",
+  },
+  {
+    id: 4,
+    title: "Formas de centrar un div",
+    description: "Explicación detallada sobre formas de centrar un div.",
+    img: "https://img.freepik.com/psd-premium/icono-3d-codificacion_235528-1625.jpg?w=1380",
+    to: "#flex-box",
+  },
+  {
+    id: 5,
+    title: "Formulario con HTML + CSS + JS",
+    description: "Explicación detallada sobre formas de centrar un div.",
+    img: "https://img.freepik.com/vector-gratis/plantilla-formulario-registro-diseno-plano_23-2147971971.jpg?w=1380&t=st=1690317851~exp=1690318451~hmac=592316065e9a8d029cbae41dde2f66ea916f19dcd4dcf9cd3a63d6dac3e30031",
+    to: "#formulario",
+  },
+  {
+    id: 6,
+    title: "Formulario con HTML + CSS + JS",
+    description: "Explicación detallada sobre formas de centrar un div.",
+    img: "https://img.freepik.com/vector-gratis/plantilla-formulario-registro-diseno-plano_23-2147971971.jpg?w=1380&t=st=1690317851~exp=1690318451~hmac=592316065e9a8d029cbae41dde2f66ea916f19dcd4dcf9cd3a63d6dac3e30031",
+    to: "#formulario",
+  },
+  {
+    id: 7,
+    title: "CRUD + JavaScript + LocalStorage",
+    description:
+      "Explicación detallada sobre la creación de un crud con JavaScript Vanila",
+    img: "https://res.cloudinary.com/practicaldev/image/fetch/s--O2cjB-id--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/a3exuz06e9h212pandfr.png",
+    to: "#crud",
+  },
+];

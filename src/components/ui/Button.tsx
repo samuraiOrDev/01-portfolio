@@ -13,7 +13,7 @@ export const Button:FC<Props> = ({
 }) => {
   return (
     <div 
-      className={`flex-flex-row justify-center items-center py-3 px-6 rounded-full cursor-pointer min-h-[48px] text-white`}
+      className={`flex-flex-row justify-center items-center py-3 px-6 rounded-full cursor-pointer min-h-[48px] text-white w-fit`}
       style={{"backgroundColor": bgColor}}
       >
         <Link href={to} className='text-white font-bold text-[16px]' title={title}>
