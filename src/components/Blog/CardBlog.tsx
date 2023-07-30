@@ -30,7 +30,7 @@ export const CardBlog: FC<Props> = ({
       initial={animateMainSectionInitialState}
     >
       <div className="bg-zinc-900 shadow-md rounded-lg max-w-sm mb-5 transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-zinc-800">
-        <div className="h-[300px] w-[380px] relative">
+        <div className="h-[300px] md:w-[380px] w-auto relative">
           <Image
             className="rounded-t-lg"
             src={img}
