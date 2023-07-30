@@ -11,7 +11,7 @@ interface Props {
   img: string;
   to: string;
 }
-export const CardBlog: FC<Props> = ({
+export const CardProject: FC<Props> = ({
   id,
   title,
   description,

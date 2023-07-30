@@ -1,0 +1,22 @@
+code {
+  background-color: #333; /* Color de fondo */
+  color: #d4d4d4; /* Color del texto */
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  padding: 8px;
+  line-height: 1.5;
+  border-radius: 4px;
+}
+
+/* Estilos para resaltar la sintaxis */
+code .keyword {
+  color: #569cd6; /* Color para palabras clave */
+}
+
+code .string {
+  color: #ce9178; /* Color para cadenas */
+}
+
+code .comment {
+  color: #6a9955; /* Color para comentarios */
+}

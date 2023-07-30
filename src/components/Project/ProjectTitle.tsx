@@ -1,9 +1,9 @@
 import React from "react";
 import { AnimationControls, motion } from "framer-motion";
-import { ElementH2, ElementP } from "../ui";
+import { ElementH2 } from "../ui";
 import { RefUseAnimate, useAnimate } from "@/hooks/useAnimate";
 import { animateMainSection, animateMainSectionInitialState } from "@/data";
-export const BlogTitle = () => {
+export const ProjectTitle = () => {
   const [ref, controls] = useAnimate(
     animateMainSection,
     animateMainSectionInitialState
@@ -15,8 +15,7 @@ export const BlogTitle = () => {
       ref={ref as RefUseAnimate["ref"]}
       initial={animateMainSectionInitialState}
     >
-      <ElementH2 mainTitle={"Bienvenido a mi"} mainTitleTail={"Blog"} />
-      <ElementP description={"Descripción básica de lo que es el blog"} />
+      <ElementH2 mainTitle={"Bienvenido a mis"} mainTitleTail={"Proyectos"} />
     </motion.div>
   );
 };

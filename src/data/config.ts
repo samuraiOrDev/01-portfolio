@@ -11,3 +11,10 @@ export const frontMatterBlog = {
     "Blog del desarrollador web FullStack SamuraiOr.Dev. Podrás encontrar diversos artículos sobre tecnologías y más.",
   author: "Víctor Manuel Ordiales García",
 };
+
+export const frontMatterProject = {
+  title: "Proyectos | SamuraiOr.Dev",
+  description:
+    "Proyectos del desarrollador web FullStack SamuraiOr.Dev. Podrás encontrar diversos proyectos en diferentes tecnologías y más.",
+  author: "Víctor Manuel Ordiales García",
+};

@@ -1,16 +1,54 @@
-import React from "react";
+import { MainLayout, ProjectTitle, CardProject } from "@/components";
+import { frontMatterProject } from "@/data/config";
+import { NextPage } from "next";
 import { Inter } from "next/font/google";
-import { Footer, ProjectsLayouts, NavBar } from "@/components";
 const inter = Inter({ subsets: ["latin"] });
-const itemsListNavBar = [
-  { title: "Inicio", to: "/" },
-];
-export default function Projects() {
+import { getAllFilesMetaData } from "../../../lib/mdx";
+interface TypeProps {
+  id: number;
+  title: string;
+  img: string;
+  slug: string;
+  description: string;
+}
+interface Props {
+  projects: TypeProps[];
+}
+const  Projects:NextPage<Props> = ({projects}) => {
   return (
-    <ProjectsLayouts title={""} description={""} font={inter.className}>
-      <NavBar itemsListNavBar={itemsListNavBar}/>
-      <h1>{"Hola buenos días!!"}</h1>
-      <Footer />
-    </ProjectsLayouts>
+    <MainLayout
+      title={frontMatterProject.title}
+      description={frontMatterProject.description}
+      font={inter.className}
+    >
+      <div
+        className="flex justify-center items-center flex-col sm:px-16 px-6 sm:pb-16 xs:pb-8 pb-12 lg:pt-6 pt-[80px]"
+        id="projects"
+      >
+        <ProjectTitle />
+        <div className="flex items-center xl:max-w-[1280px] w-full lg:flex-row flex-col mx-auto gap-2 flex-wrap">
+          {projects.map((post) => (
+            <CardProject
+              key={post.id}
+              id={post.id}
+              title={post.title}
+              description={post.description}
+              img={post.img}
+              to={`/projects/${post.slug}`}
+            />
+          ))}
+        </div>
+      </div>
+    </MainLayout>
   );
 }
+
+export async function getStaticProps() {
+  const projects = await getAllFilesMetaData("data/projects");
+  console.log(projects)
+  return {
+    props: {projects}
+  }
+}
+
+export default Projects

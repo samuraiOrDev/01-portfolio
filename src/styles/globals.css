@@ -26,3 +26,34 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-track {
   background-color: #333; /* Color de la pista de la barra de desplazamiento */
 }
+strong {
+  color: #bbb;
+}
+em {
+  color: #666;
+  text-shadow: 0 0 10px #000c;
+  letter-spacing: -0.5px;
+  padding: 0 0.3rem;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 500;
+} /* Estilos para la tabla */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.table-wrapper tr th {
+  text-align: start;
+  background: hsl(220, 13%, 18%);
+}
+.table-wrapper th,
+.table-wrapper td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
