@@ -18,7 +18,7 @@ const Post = ({ source, frontMatter }) => {
         id={`post-${frontMatter.id}`}
       >
         <div className="flex items-center xl:max-w-[768px] w-full lg:flex-row flex-col mx-auto gap-2 flex-wrap">
-        <div className="mt-[160px] p-10 text-start">
+        <div className="mt-[160px] md:p-10 text-start">
           <MDXRemote {...source}  components={MDXComponents}/>
           </div>
         </div>
