@@ -1,47 +1,75 @@
 ---
 id: 1
-title: "Introducción a JavaScript"
-description: "Artículo a modo de introducción sobre JavaScript."
+title: "JavaScript: Forjando la Web Moderna"
+description: "Importancia y las características del lenguaje de programación JavaScript."
 img: "https://img.freepik.com/vector-gratis/programadores-que-utilizan-lenguaje-programacion-javascript-computadora-gente-pequena-lenguaje-javascript-motor-javascript-concepto-desarrollo-web-js-ilustracion-aislada-violeta-vibrante-brillante_335657-986.jpg?w=1380&t=st=1690316761~exp=1690317361~hmac=2ee7b5da73f7dbc463c4d7e35afc94a3a971d20a3abeca9a6bc4dc0f8b5de361"
 ---
 
-# ¿Qué es JavaScript ?
+# JavaScript: Forjando la Web Moderna
+<ComponentDate date="08-09-2023" time="15 minutos"/>
 
-JavaScript es uno de los lenguajes de programación más ampliamente utilizados y populares en el mundo. 
+## Introducción
 
-Su inicio se dio con el propósito de agregar interactividad y funcionalidad a las páginas web. Sin embargo, ha crecido significativamente y se ha transformado en un lenguaje de programación de <strong>propósito general</strong>. 
+En el vasto y dinámico panorama de la programación, un lenguaje ha emprendido un viaje extraordinario, transformando la web y alterando nuestra 
+percepción de la la interactividad digital. 
+Este lenguaje es <HighlightedCode>JavaScript</HighlightedCode>, una herramienta que ha trasncendido sus modelos originales para convertirse en un pilar fundamental del desarrollo web moderno. 
 
-Su flexibilidad y la extensa comunidad de desarrolladores que lo respalda hacen que JavaScript continúe siendo un <strong>pilar fundamental en la industria tecnológica</strong>.
-
-> Programar es el acto de crear un conjunto de instrucciones, también conocido como "código", para guiar a una computadora u otro 
-> dispositivo en cómo llevar a cabo una tarea específica. 
-
-## Por qué aprender JavaScript
+En este artículo, sumérgete en las aguas cristalinas de JavaScript mientras desglosamos sus características intrínsecas y exploramos cómo ha definido la forma en que experimentamos la web. 
 
 
-JavaScript es el <strong>único</strong> lenguaje de programación que todos los navegadores web comprenden de forma nativa. Por eso, prácticamente todas las páginas web que visitamos <strong>contienen alguna línea de código de JavaScript</strong>. 
+## Cronología de JavaScript: Un Viaje a Través del Tiempo
+
+A lo largo de las décadas, JavaScript ha evolucionado desde sus modestos origenes hasta convertirse en un pilar fundamental de la web moderna. 
+Sigue esta Cronología para descubir cómo ha madurado y se ha transformado a lo largo del tiempo: 
+
+* <strong>1995 - Nacimiento de JavaScript:</strong> Brenda Eich, ingeniero de Netscape, creac JavaScript en solo 10 días como una solución para dar interactividad a las páginas web en el navegador Netscape Navigator 2.0.
+* <strong>1997 - Estandarización con ECMAScript:</strong> ECMAScript es el estándar que define la sintaxis y el comportamiento del lengauje, proporcionando una base sólida para su desarrollo continuo. 
+* <strong> 2000s - Auge de AJAX:</strong> La técnica AJAX (Asynchronous JavaScript and XM) revoluciona la experiencia del usuario en la web, permitiendo actualizaciones asincrónicas de contenido sin necesidad de recargar toda la página. Esto impulsa la popularidad y el uso de JavaScript en aplicaciones web más interactivas.
+* <strong>2009 - Nacimiento de Node.js:</strong> Ryan Dahl crea Node.js, un entorno en tiempo de ejecucción de JavaScript que permite la ejecucción de código en el lado del servidor. Esto desencadena el auge del desarrollo de aplicaciones en tiempo real y de alta concurrencia.
+* <strong>2010s - Surgimiento de Frameworks y Bibliotecas:</strong> Frameworks y bibliotecas de JavaScript como React, Angular y Vue revolucionan la creación de interfaces de usuarios dinámicos y reactivas, impulsando el desarrollo de aplicaciones de una sola página.
+* <strong>2015 - ECMAScript 2015 (ES6):</strong> Se lanza ECMAScript2015 (también conocido como ES6), una actualización importante del lengauje que introduce características como las clases, las funciones de flecha, las promesas y la sintaxis mejorada.
+* <strong>2020s - JavaScript en Todas Partes:</strong> JavaScript continúa expandiéndose a nuevos dominios, desde aplicaciones web y móviles hasta el internet de las coas y la realidad virtual. Su comunidad activa sigue impulsando innovaciones y mejoras del lenguaje. 
+
+A medida que seguimos avanzando en el tiempo, JavaScript se mantiene como un pilar inquebrantable de la tecnología, forjando el presente y moldeando el futuro de la web y más allá.
+
+## La Importancia de JavaScript
+
+En el tejido mismo de la revolución digital, JavaScript emergar como un faro luminoso que quía nuestras interacciones en línea. Su influencia ha redefinido la experiencia del usuario en la web y ha trasncendido sus raíces humildes para convertirse en una tecnología esencial en el paisaje tecnológico actual. Veamos cómo JavaScript ha forjado su importancia vanguardista:
+
+* <strong>Dinamismo interactivo:</strong> Artífice detrás de la interactividad cautivante que define la web moderna. 
+* <strong>Resistencia a la Monotonía:</strong> Antes la navegación era limitida y en gran medida pasiva. JavaScript abrió un nuevo mundo de posibilidades, permitiendo a los desarrolladores crear elementos interactivos y cambiantes que rompieron las cadenas de la monotonía estática.
+* <strong>Facilitador del Desarrollo Moderno:</strong> El alcance de JavaScript se expande más allá del navegador. Gracias Node.js, JavaScript encontró su camino en el mundo del desarrollo del lado del servidor. 
+* <strong>Una Comunidad en Evolución:</strong> La comunidad de desarrolladores de JavaScript es una fuerza impulsora detrás de su importancia vanguardista. A lo largo de los años, esta comunidad ha crecido en tamaño y experiencia, generando innumerables recursos, tutoriales y contribuciones de código abierto que han enriquecido y elevado aún más el ecosistema de JavaScript.
+
+En resumen, la importancia vanguardista de JavaScript radica en su capacidad para transformar pasividad en interactividad, estática en dinámica y navegación en exploración. A medida que avanzamos en una era digital en constante cambio, JavaScript se mantiene como una herramienta esencial en la caja de herramientas de todo desarrollador, tejiendo el tejido mismo de la web moderna y abriendo el camino hacia nuevas fronteras tecnológicas.
 
 
-<strong>Su curva de aprendizaje</strong> es bastante corta ya que en muy
-poco tiempo puedes empezar a hacer desarrollos y aplicaciones complejas, aunque para llegar ser un buen
-programador es necesario una gran cantidad de años de experiencia con el mismo.
+## Desentrañando las Características Emblemáticas de JavaScript
 
-JavaScript es altamente solicitado como lenguaje de programación. Se emplea ampliamente en aplicaciones web, móviles, escritorio, backend, videojuegos, inteligencia artificial, y más. <strong>Ofrece un amplio abanico de oportunidades en un solo lenguaje</strong>.
+#### 1.) Interpretabilidad y Elevado Nivel de Abstracción
 
+JavaScript es un lenguaje interpretado, liberando del yugo de la compilación a los desarrolladores. Este hecho permite un flujo de desarrollo ágil al permitir 
+visualizar resultados instantáneos sin necesidad de pasos de compilación intermedios. Además, su sintaxis de alto nivel fomenta una curva de aprendizaje suave y una transición fluida para los recién llegados. 
 
-## La consola del navegador
+#### 2.) Paradigma Basado en Eventos y Asincronía
 
-Todos los navegadores presentan una herramienta llamada consola. La consola nos <strong>permite ejecutar código JavScript en tiempo real y ver el resultado</strong>. También ahí podemos ver los erroes, advertencias y trazas que se producen en nuestro código.
+La arquitectura esencialmente basada en eventos de JavaScript impulsa la generación de interacciones dinámicas. Al responder manera eficaz a eventos como clics de botones o envíos de formularios. JavaScript inyecta vida en las páginas web. Su naturaleza asincrónica le pemiter abordar múltiples tareas de forma simultánea, evitando bloqueos en al ejecucción del programa principal y asegurando una experiencia fuida para los usuarios.
 
-### Cómo abrir la consola
+#### 3.) Manipulación del DOM (Modelo de Objetos del Documento)
+JavaScript desbloquea la puerta al DOM, una representación en memoria de la estructura y contenido de una página web. Esta capacidad de manipulación del DOM permite una creación activa de contenido en tiempo real, permitiendo cambios instantáneos en el contenido y estilo de la página. Las interacciones dinámicas que dan vida a la web moderna son posibles gracias a esta característica distintiva.
 
-Para abrir la consola del navegador debes hacer lo siguiente: 
-
-* Abre tu navegador web favorito, por ejemplo, Google Chrome. 
-* Ve a la página about:blank en la barra de direcciones. Así evitaremos que la página web que hemos cargado nos moleste.
-* Haz click derecho en cualquier parte de la página y selecciona la opción Inspeccionar Elemento o Inspect.
-
-Aquí podrás ejecutar tu código JavaScript y ver el resultado. Es lo que usaremos en las primeras clases del curso. Más adelante pasaremos a usar un editor de código más potente.
+#### 4.) Ecosistema de Frameworks y Bibliotecas
+En el corazón de la versatilidad de JavaScript yace su vibrante ecosistema de bibliotecas y frameworks. React, Angular y Vue.js son ejemplos de bibliotecas que simplifican y agilizan la creación de interfaces de usuario atractivas y dinámicas. Asimismo, Node.js amplía el dominio de JavaScript más allá del navegador, permitiendo su ejecución en el servidor y desatando una nueva ola de aplicaciones en tiempo real y basadas en eventos.
 
 
-<img src="/img/consola.png" alt="Consola de los Navegadores" />
+#### 5.) Compatibilidad Universal
+
+La omnipresencia de JavaScript en navegadores modernos garantiza una experiencia uniforme en múltiples plataformas y dispositivos. Desde computadoras de escritorio hasta dispositivos móviles y todo lo que hay en medio, JavaScript proporciona una base confiable para construir aplicaciones y experiencias interactivas sin fisuras.
+
+#### 6.) Comunidad Abundante y Activa
+
+La comunidad de desarrolladores de JavaScript es un oasis de conocimiento y colaboración. Con una abundancia de recursos en línea, tutoriales y foros, esta comunidad facilita el aprendizaje continuo y la resolución de problemas. Además, la frecuencia de actualizaciones y mejoras subraya la vitalidad constante de este ecosistema.
+
+## Conclusión
+
+JavaScript, un lenguaje que una vez fue un mero instrumento para embellecer páginas web, ha trascendido su papel inicial para convertirse en una fuerza trascendental en el desarrollo web moderno. Su influencia permea la web, impulsando interacciones dinámicas y transformando la experiencia digital. A medida que continuamos navegando por las aguas cambiantes de la tecnología, no hay duda de que JavaScript seguirá desempeñando un papel protagónista, moldeando nuestro mundo digital de maneras que ni siquiera podemos imaginar.

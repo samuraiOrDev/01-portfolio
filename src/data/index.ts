@@ -7,7 +7,7 @@ export const heroSectionText = {
   supTitle: "Hola, soy",
   title: "Víctor Manuel",
   subTitle: "Ordiales García",
-  descriptionSup: "Desarrollador Web Full Stack y graduado en Física",
+  descriptionSup: "Desarrollador Web y Graduado en Física.",
   descriptionSub:
     "Me considero amante de las nuevas tecnologías, del desarrollo de software y de la Física de Partículas.",
 };
@@ -19,7 +19,7 @@ export const mainSectionTitle = {
 
 export const mainSectionText = {
   description:
-    "¡Bienvenidos a mi sitio web! Soy Víctor Manuel Ordiales García, desarrollador web Full Stack y graduado en física. Aquí encontrarás información sobre mi formación académica, experiencia laboral y proyectos destacados. ¡Contáctame para discutir cómo puedo ayudarte a alcanzar tus objetivos tecnológicos!",
+    "Hola! Soy Víctor Manuel Ordiales García, desarrollador web y graduado en física. Aquí hallarás detalles sobre mi educación, experiencia laboral y proyectos destacados. ¡Hablemos para ver cómo puedo colaborar en tus metas tecnológicas!",
 };
 export const heroSectionButtons = [
   { bgColor: "#ca8a04", title: "Download CV", to: "#cv" },
@@ -76,30 +76,28 @@ export const animateMainSectionInitialStateContent = {
 export const cardsMainSection = [
   {
     title: "Educación",
-    description:
-      "Información sobre mi formación académica, cursos y certificaciones",
+    description: "Formación académica, cursos y certificaciones",
     icon: FaUserGraduate,
     bgIcon: "#0d9488",
     to: "#education-section",
   },
   {
     title: "Experiencia",
-    description:
-      "Información sobre mi experiencia laboral y proyectos destacados",
+    description: "Experiencia laboral y proyectos destacados",
     icon: MdWorkHistory,
     bgIcon: "#ca8a04",
     to: "#experience-section",
   },
   {
     title: "Proyectos",
-    description: "Información sobre mis proyectos personales",
+    description: "Proyectos personales",
     icon: AiOutlineProject,
     bgIcon: "#8f1f0d",
     to: "#projects-section",
   },
   {
     title: "Habilidades",
-    description: "Información sobre mis habilidades y tecnologías",
+    description: "Habilidades, habilidades blandas y tecnologías",
     icon: BsFillGearFill,
     bgIcon: "#5b21b6",
     to: "#skills-section",
@@ -111,17 +109,17 @@ export const aboutMeSection = {
   subTitle: "SamuraiOr.Dev",
   parrafos: [
     "¡Hola! Soy Víctor Manuel Ordiales García, un apasionado del desarrollo web y la física. Mi experiencia y formación en ambas disciplinas me han permitido desarrollar habilidades únicas que me permiten abordar problemas de manera innovadora y creativa",
-    "Como graduado en física, tengo una comprensión sólida de los principios matemáticos y científicos que rigen el mundo que nos rodea. Esta base sólida me ha permitido tener una perspectiva única en el mundo del desarrollo web, lo que me ha permitido resolver problemas complejos con una comprensión profunda y detallada",
-    "Mi experiencia en el desarrollo web se extiende a unos dos años de experiencia en la creación de sitios web de alta calidad y fácil uso. He trabajado en proyectos de desarrollo web personalizados, programación de scripts y manejo de bases de datos. Mi objetivo es siempre crear soluciones únicas y personalizadas para cada proyecto que se me presenta",
+    "Como graduado en física, tengo una comprensión sólida de los principios matemáticos y científicos que rigen el mundo que nos rodea. Esta base sólida me ha permitido tener una perspectiva única en el mundo del desarrollo web",
+    "Tengo más de dos años de experiencia en el desarrollo web. He trabajado en proyectos de desarrollo web personalizados, programación de scripts y manejo de bases de datos",
     "Soy una persona apasionada y dedicada que siempre está buscando oportunidades para seguir aprendiendo y mejorando mis habilidades. Me encanta estar al tanto de las últimas tendencias y tecnologías en el desarrollo web y la física, y aplicarlas en mis proyectos",
-    "Estoy emocionado de compartir mi pasión y conocimientos contigo. ¡Explora mi sección personal y descubre cómo puedo ayudarte en tus proyectos de desarrollo web y más allá!",
+    "Estoy emocionado de compartir mi pasión y conocimientos contigo. ¡Explora mi sección personal y descubre cómo puedo ayudarte!!",
   ],
 };
 
 export const educationSection = {
   title: "Educación",
   description:
-    "Uno de mis mayores logros académicos ha sido obtener el graduado en Física de la Universidad de Extremadura. Además de esta titulación, he realizado numerosos cursos enfocados en el desarrollo web y en el aprendizaje automático. Actualmente, sigo realizando gran cantidad de curso y certificaciones para seguir creciendo como profesional",
+    "Uno de mis mayores logros académicos ha sido obtener el graduado en Física de la Universidad de Extremadura. Además de esta titulación, he realizado numerosos cursos enfocados en el desarrollo web y en el aprendizaje automático. Actualmente, sigo realizando una gran cantidad de cursos y certificaciones para seguir creciendo como profesional",
 };
 export interface ExperienceTag {
   name: string;
@@ -139,7 +137,7 @@ export const experience = [
   {
     id: 2,
     job: "Developer, Viewnext S.A",
-    date: "Agosto 2021 - Deciembre 2022",
+    date: "Agosto 2021 - Febrero 2023",
     project: "Proyecto SAC F.O.Digital + Portales + Movilidad LEAN",
     tags: [
       {
@@ -172,16 +170,12 @@ export const experience = [
         bg: "rgb(6 95 70)",
         textColor: "rgb(110 231 183)",
       },
-      {
-        name: "...",
-        bg: "bg-transparent",
-      },
     ],
   },
   {
     id: 3,
     job: "Developer, Viewnext S.A",
-    date: "Diciembre 2022 - Actualidad",
+    date: "Febrero 2023 - Actualidad",
     project: "Proyecto SAC F.O.Digital + Portales + Movilidad LEAN",
     tags: [
       {
@@ -209,17 +203,13 @@ export const experience = [
         bg: "rgb(133 77 14)",
         textColor: "rgb(253 224 71)",
       },
-      {
-        name: "...",
-        bg: "bg-transparent",
-      },
     ],
   },
   {
     id: 1,
     job: " I+D, eCapure3D S.L",
     date: "Abril 2021 - Junio 2021",
-    project: "Algoritmos predictivos y análisis de datos (Prácticas).",
+    project: "Algoritmos predictivos y análisis de datos (Prácticas)",
     tags: [
       {
         name: "Python",
@@ -245,10 +235,6 @@ export const experience = [
         name: "Postgresql",
         bg: "rgb(55 65 81)",
         textColor: "rgb(209 213 219)",
-      },
-      {
-        name: "...",
-        bg: "bg-transparent",
       },
     ],
   },
@@ -292,11 +278,6 @@ export const educationSectionCards = [
         bg: "rgb(49 46 129)",
         textColor: "rgb(165 180 252)",
       },
-
-      {
-        name: "...",
-        bg: "transparent",
-      },
     ],
   },
   {
@@ -336,10 +317,6 @@ export const educationSectionCards = [
         bg: "rgb(49 46 129)",
         textColor: "rgb(165 180 252)",
       },
-      {
-        name: "...",
-        bg: "bg-transparent",
-      },
     ],
   },
 ].sort((a, b) => b.id - a.id);
@@ -364,7 +341,6 @@ export const arrayCourses: TypeArrayCourses[] = [
     item1: "Conocimiento medios/avanzado de Htm5, Css3 y Js.",
     item2: "Conocimientos básicos de php y bases de datos relacionales.",
     item3: "Realización de númerosos proyectos.",
-    horas: "54 horas.",
     item4: "Leer más",
     url: "https://www.udemy.com/course/desarrollo-web-completo-con-html5-css3-js-php-y-mysql/",
   },
@@ -375,7 +351,6 @@ export const arrayCourses: TypeArrayCourses[] = [
     item1: "Aprendizaje de CSS.",
     item2: "Flex.",
     item3: "Grid.",
-    horas: "13 horas.",
     item4: "Leer más",
     url: "https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/",
   },
@@ -386,7 +361,6 @@ export const arrayCourses: TypeArrayCourses[] = [
     item1: "Desarrollo web fullstack usando JavaScript.",
     item2: "Frontend: Js,Jquery,Html,Css y Angular.",
     item3: "Backend: NodeJs.",
-    horas: "32 horas.",
     item4: "Leer más",
     url: "https://www.udemy.com/course/master-en-javascript-aprender-js-jquery-angular-nodejs-y-mas/",
   },
@@ -398,7 +372,6 @@ export const arrayCourses: TypeArrayCourses[] = [
     item2: "Frontend: Html y Css.",
     item3: "Backend: Django y Flask.",
     item4: "Leer más",
-    horas: "30.5 horas.",
     url: "https://www.udemy.com/course/master-en-python-aprender-python-django-flask-y-tkinter//",
   },
   {
@@ -409,7 +382,6 @@ export const arrayCourses: TypeArrayCourses[] = [
     item2: "Preprocesadores: Sass y Leess.",
     item3: "Flex y Grid.",
     item4: "Leer más",
-    horas: "20.5 horas.",
     url: "https://www.udemy.com/course/master-en-css-responsive-sass-flexbox-grid-y-boostrap-4/",
   },
   {
@@ -419,7 +391,6 @@ export const arrayCourses: TypeArrayCourses[] = [
     item1: "Clone de Spotify.",
     item2: "Tecnologías Web: ReactJS, Sass y Firebase.",
     item3: "Tecnologías Desktop: ElectronJS",
-    horas: "19.5 horas.",
     item4: "Leer más",
     url: "https://www.udemy.com/course/electron-js-y-react-js-creando-un-spotify/",
   },
@@ -457,18 +428,6 @@ export const arrayCourses: TypeArrayCourses[] = [
   },
   {
     id: 10,
-    title: "Curo Completo: Linux Bash Shell Scripting +Ejemplos Reales",
-    date: "Julio 2022  | Plataforma Web Udemy.",
-    item1: "Linux.",
-    item2: "Control de permisos.",
-    item3: "Bash.",
-    horas: "12.5 horas.",
-    item4: "Leer más",
-    url: "https://www.udemy.com/course/shell-scripting-linux-bash/learn/lecture/27171062?start=240#overview",
-  },
-
-  {
-    id: 12,
     title: "Next.js: El framework de React para producción",
     date: "Enero 2023 - Mayo 2023 | Plataforma Web Udemy.",
     item1: "Nextjs.",
@@ -479,7 +438,7 @@ export const arrayCourses: TypeArrayCourses[] = [
     url: "https://www.udemy.com/course/shell-scripting-linux-bash/learn/lecture/27171062?start=240#overview",
   },
   {
-    id: 13,
+    id: 11,
     title: "Master en React: Aprender ReactJS, Hooks, MERN, NodeJS, JWT+",
     date: "Enero 2023 - Mayo 2023 | Plataforma Web Udemy.",
     item1: "React.",
@@ -490,7 +449,7 @@ export const arrayCourses: TypeArrayCourses[] = [
     url: "https://www.udemy.com/course/master-en-react-aprender-reactjs-hooks-mern-nodejs-jwt/",
   },
   {
-    id: 14,
+    id: 12,
     title: "JavaScript Moderno: Guía para dominar el lenguaje",
     date: "Enero 2023 - Febrero 2023 | Plataforma Web Udemy.",
     item1: "JavaScript.",
@@ -501,7 +460,7 @@ export const arrayCourses: TypeArrayCourses[] = [
     url: "https://www.udemy.com/course/javascript-fernando-herrera/",
   },
   {
-    id: 15,
+    id: 13,
     title: "TypeScript: Tu completa guía y manual de mano",
     date: "Enero 2023 - Febrero 2023 | Plataforma Web Udemy.",
     item1: "TypeScript.",
@@ -512,13 +471,12 @@ export const arrayCourses: TypeArrayCourses[] = [
     url: "https://www.udemy.com/course/typescript-guia-completa/",
   },
   {
-    id: 16,
+    id: 14,
     title: "Curso de Diseño Web moderno desde cero a avanzado HTML5 y CSS3",
     date: "Diciembre 2021 | Plataforma Web Udemy.",
     item1: "HTML5.",
     item2: "CSS3.",
     item3: "Flexbox, Grid, etc.",
-    horas: "17.5 horas.",
     item4: "Leer más",
     url: "https://www.udemy.com/course/curso-diseno-web-moderno-desde-cero/",
   },
@@ -636,7 +594,7 @@ export const skillsSection = {
 export const expeienceSection = {
   title: "Experiencia",
   description:
-    "Tengo alrededor de 2 años de experiencia trabajando en proyectos tanto de frontend como de backend, además de un breve período, de dos  meses, en el que me dediqué a proyectos de machine learning",
+    "Tengo más de 2 años de experiencia trabajando en proyectos tanto de frontend como de backend, además de un breve período, de dos  meses, en el que me dediqué a proyectos de machine learning",
 };
 export const allProjects = [
   {

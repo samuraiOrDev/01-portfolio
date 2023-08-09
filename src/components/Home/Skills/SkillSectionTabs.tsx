@@ -6,8 +6,7 @@ export const allSkills = [
     elements: [
       { component: LogoJavaScript, title: "JavaScript" },
       { component: LogoTypeScript, title: "TypeScript" },
-      { component: LogoHtml, title: "Html" },
-      { component: LogoCss, title: "Css" },
+      
       { component: LogoJava, title: "Java" },
       { component: LogoPython, title: "Python" },
     ],
@@ -15,6 +14,8 @@ export const allSkills = [
   {
     title: "Frontend",
     elements: [
+      { component: LogoHtml, title: "Html" },
+      { component: LogoCss, title: "Css" },
       { component: LogoVite, title: "Vite JS" },
       { component: LogoAstro, title: "Astro" },
       { component: LogoReact, title: "React" },
