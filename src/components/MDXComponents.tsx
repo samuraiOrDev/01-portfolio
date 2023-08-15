@@ -4,6 +4,7 @@ import { Table } from "./Mdx/Table";
 import { HighlightedCode } from "./Mdx/HighlightedCode";
 import { ComponentDate } from "./Mdx/ComponentDate";
 import { Link } from "./Mdx/Link";
+import { ImgPikachu } from "./Mdx/ImgPikachu";
 
 interface TypeProps {
   children:
@@ -56,6 +57,7 @@ const MDXComponents = {
   HighlightedCode,
   ComponentDate,
   Link,
+  ImgPikachu,
 };
 
 export default MDXComponents;

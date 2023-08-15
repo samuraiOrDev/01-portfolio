@@ -10,11 +10,13 @@ interface TypeProps {
   img: string;
   slug: string;
   description: string;
+  toGitHub: string;
+  toProject: string;
 }
 interface Props {
   projects: TypeProps[];
 }
-const  Projects:NextPage<Props> = ({projects}) => {
+const Projects: NextPage<Props> = ({ projects }) => {
   return (
     <MainLayout
       title={frontMatterProject.title}
@@ -35,20 +37,22 @@ const  Projects:NextPage<Props> = ({projects}) => {
               description={post.description}
               img={post.img}
               to={`/projects/${post.slug}`}
+              toGitHub={post.toGitHub}
+              toProject={post.toProject}
             />
           ))}
         </div>
       </div>
     </MainLayout>
   );
-}
+};
 
 export async function getStaticProps() {
   const projects = await getAllFilesMetaData("data/projects");
-  console.log(projects)
+  console.log(projects);
   return {
-    props: {projects}
-  }
+    props: { projects },
+  };
 }
 
-export default Projects
+export default Projects;
