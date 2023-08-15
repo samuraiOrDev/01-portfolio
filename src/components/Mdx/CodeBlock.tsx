@@ -1,13 +1,18 @@
+import { FC } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { coldarkDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
-//@ts-ignore
-export const CodeBlock = ({ children, className = "java" }) => {
+import { oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+
+interface Props {
+  text: string;
+  className: string;
+}
+export const CodeBlock: FC<Props> = ({ text, className = "java" }) => {
   const language = className && className.split("-")[1];
   console.log(language);
   return (
-    <div className="mt-10 mb-10">
-      <SyntaxHighlighter language={language} style={coldarkDark}>
-        {children.trim()}
+    <div className="mt-10 mb-10 w-[auto]">
+      <SyntaxHighlighter language={'js'} style={oneDark} wrapLongLines className=" text-[10px]  sm:text-[12px] md:text-[16px]">
+        {text}
       </SyntaxHighlighter>
     </div>
   );

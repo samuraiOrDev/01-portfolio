@@ -47,7 +47,7 @@ const MDXComponents = {
   li: (props: TypeProps) => (
     <li className=" list-disc mb-2">{props.children}</li>
   ),
-  code: CodeBlock,
+
   blockquote: (props: TypeProps) => (
     <blockquote className=" border-yellow-600 border-l-4  pl-4 text-yellow-700">
       {props.children}
@@ -57,6 +57,7 @@ const MDXComponents = {
   HighlightedCode,
   ComponentDate,
   Link,
+  CodeBlock,
   ImgPikachu,
 };
 

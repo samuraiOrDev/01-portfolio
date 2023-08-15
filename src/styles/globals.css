@@ -57,3 +57,9 @@ em {
   border: 1px solid #ccc;
   padding: 8px;
 }
+
+@media (max-width: 640px) {
+  .textCode {
+    font-size: 12px;
+  }
+}

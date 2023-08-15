@@ -51,25 +51,23 @@ La estructura del proyecto se ha desarrollado utilizando <HighlightedCode>React<
 
 El <HighlightedCode>Componente Principal</HighlightedCode> se llama <HighlightedCode>App.tsx</HighlightedCode>.Este componente es el <strong>end point</strong> de entrada a la aplicación y es donde se han agregado el resto de los compoenentes que conforman la aplicación.
 
-```js
+<CodeBlock text={`
 import { InputTask, ListTasks, Logo } from "./components";
 
 function App() {
   return (
-    <div className="container">
-      <div className="container-cabecera">
-        <Logo />
+      <div className="container">
+        <div className="container-cabecera">
+          <Logo />
+        </div>
+        <div className="container-contenido">
+          <InputTask />
+          <ListTasks />
+        </div>
       </div>
-      <div className="container-contenido">
-        <InputTask />
-        <ListTasks />
-      </div>
-    </div>
   );
 }
-
-export default App;
-```
+export default App; `}  />
 
 Los componentes incluidos son los siguientes:
 
