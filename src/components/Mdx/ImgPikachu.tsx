@@ -8,12 +8,12 @@ export const ImgPikachu = () => {
       <Image
         src={NoCssPikachu}
         alt={"No CSS Pikachu"}
-        className="h-[320px] w-[320px]"
+        className="h-[320px] w-auto sm:w-[320px]"
       />
       <Image
         src={CssPikachu}
         alt={"CSS Pikachu"}
-        className="h-[320px] w-[320px]"
+        className="h-[320px] w-auto sm:w-[320px]"
       />
     </div>
   );
