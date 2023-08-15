@@ -1,5 +1,5 @@
 import { useAnimation } from "framer-motion";
-import { useInView } from 'react-intersection-observer';
+import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 type AnimateHeroBanner = {
   translateX?: number;
@@ -19,13 +19,17 @@ type AnimateInitialState = {
 export interface RefUseAnimate {
   ref: (node?: Element | null | undefined) => void;
 }
-export const useAnimate = (animateHeroBanner: AnimateHeroBanner, animateInitialState: AnimateInitialState ) => {
+export const useAnimate = (
+  animateHeroBanner: AnimateHeroBanner,
+  animateInitialState: AnimateInitialState
+) => {
   const controls = useAnimation();
-  const [ ref, inView ]= useInView({triggerOnce: false});
+  const [ref, inView] = useInView({ triggerOnce: false });
   useEffect(() => {
     inView
       ? controls.start(animateHeroBanner)
       : controls.start(animateInitialState);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [controls, inView]);
-  return [ ref, controls ];
+  return [ref, controls];
 };
