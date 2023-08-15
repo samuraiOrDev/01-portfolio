@@ -4,25 +4,35 @@ import { MDXRemote } from "next-mdx-remote";
 import { MainLayout } from "@/components";
 import { Inter } from "next/font/google";
 import MDXComponents from "@/components/MDXComponents";
+import { AnimationControls, motion } from "framer-motion";
+import { RefUseAnimate, useAnimate } from "@/hooks/useAnimate";
+import { animateMainSection, animateMainSectionInitialState } from "@/data";
 const inter = Inter({ subsets: ["latin"] });
 //@ts-ignore
 const Post = ({ source, frontMatter }) => {
+  const [ref, controls] = useAnimate(
+    animateMainSection,
+    animateMainSectionInitialState
+  );
   return (
     <MainLayout
       title={frontMatter.title + " | SamuraiOr.Dev"}
       description={frontMatter.description}
       font={inter.className}
     >
-      <div
+      <motion.div
         className="flex justify-center items-center flex-col sm:px-16 px-6 sm:pb-16 xs:pb-8 pb-12 lg:pt-6 pt-[80px]"
+        animate={controls as AnimationControls}
+        ref={ref as RefUseAnimate["ref"]}
+        initial={animateMainSectionInitialState}
         id={`post-${frontMatter.id}`}
       >
         <div className="flex items-center xl:max-w-[768px] w-full lg:flex-row flex-col mx-auto gap-2 flex-wrap">
-        <div className="mt-[160px] md:p-10 text-start">
-          <MDXRemote {...source}  components={MDXComponents}/>
+          <div className="mt-[160px] md:p-10 text-start">
+            <MDXRemote {...source} components={MDXComponents} />
           </div>
         </div>
-      </div>
+      </motion.div>
     </MainLayout>
   );
 };

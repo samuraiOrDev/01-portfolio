@@ -3,6 +3,7 @@ import { CodeBlock } from "./Mdx/CodeBlock";
 import { Table } from "./Mdx/Table";
 import { HighlightedCode } from "./Mdx/HighlightedCode";
 import { ComponentDate } from "./Mdx/ComponentDate";
+import { Link } from "./Mdx/Link";
 
 interface TypeProps {
   children:
@@ -35,7 +36,7 @@ const MDXComponents = {
   ),
   h4: (props: TypeProps) => (
     <h3 className="text-xl mt-10 font-bold text-gradient-h1">
-       {props.children}
+      {props.children}
     </h3>
   ),
   p: (props: TypeProps) => (
@@ -53,7 +54,8 @@ const MDXComponents = {
   ),
   Table,
   HighlightedCode,
-  ComponentDate
+  ComponentDate,
+  Link,
 };
 
 export default MDXComponents;

@@ -4,72 +4,150 @@ title: "To-Do-React"
 description: "Proyecto de listado de tareas: React JS + Vite JS."
 img: "/img/toDoReact.png"
 ---
+
 # To Do React App
 
-
+<ComponentDate date="15-09-2023" time="10 minutos" />
+<Link href="https://tod-do-react.vercel.app/" />
 ## Definición
 
-La aplicación consiste en una lista de tareas, donde se pueden añadir, eliminar y marcar como completadas las tareas. Todo utilizando el localStorage para guardar la información de las tareas.
+La aplicación consiste en una <HighlightedCode>listado de tareas</HighlightedCode> donde se pueden añadir, eliminar y marcar como completadas dichas tareas. Todo utilizando el localStorage para guardar la información en el navegador.
 
-El proyecto se puede dividir en tres partes bien diferenciadas: 
+El proyecto se puede dividir en tres partes bien diferenciadas:
 
-- Maquetación 
-- Estructura (Componentes React)
-- Lógica/Funcionales
+- <HighlightedCode>Maquetación</HighlightedCode>
 
-## Maquetación
+- <HighlightedCode>Estructura/Componentes React</HighlightedCode>
 
-En este proyecto, se ha utilizado CSS vanilla para la maquetación, lo que significa que se ha trabajado sin la utilización de frameworks de CSS. Esto ha permitido una mayor libertad en la personalización y la creación de un diseño más único y a medida.
+- <HighlightedCode>Lógica/Funcionalidad</HighlightedCode>
 
-Además, se ha desarrollado un diseño responsive, utilizando media queries para adaptar el diseño a diferentes tamaños de pantalla. Esto es importante, ya que permite que el sitio web se vea correctamente en dispositivos móviles y tabletas, además de en pantallas de escritorio.
+### Maquetación
 
-Se ha utilizado el modelo de caja-flexbox para la distribución de los elementos, lo que ha facilitado la creación de un diseño más ordenado y limpio. Este modelo permite el control de la posición y tamaño de los elementos en función de su contenido y relación con otros elementos.
+Este proyecto se ha realizado utilizando CSS vanila, permitiendo una mayor libertad a la hora de la personalización y la creación del diseño sin tener que estar límitado a las características de los frameworks actuales.
 
-Por último, se ha utilizado la pseudo-clase ::root para definir las variables de color y algunos valores de altura y anchura. Esto ha permitido una mayor eficiencia en el desarrollo y la capacidad de cambiar fácilmente los valores de estilo en todo el sitio web.
+La maquetación/diseño se ha realizado teniendo en cuenta los siguientes principios:
 
-## Estructura: Componentes React
+- <HighlightedCode>Responsive:</HighlightedCode> Uso de <strong>
+    media queries
+  </strong> para adaptar el diseño a diferentes tamaños de pantallas, ya sean dispostivos
+  móviles, tablets o ordenadores de sobremesa.
+- <HighlightedCode>Flex-Box:</HighlightedCode> Uso del modelo de cajas <strong>
+    flexbox
+  </strong> para la distribución de los elementos. Este modelo permite un control
+  de la posición y tamaño de los elementos en función de su contenido y su relación
+  con otros elementos.{" "}
+- <HighlightedCode>Pseudo-clase :root:</HighlightedCode> Está pseudo-clase permite
+  definir varibles con valores de propiedades css que se van a estar disponibles
+  de forma global en la aplicación.
 
-La estructura del proyecto se ha desarrollado utilizando React y se ha aplicado el modelo de componentes para dividir el proyecto en diferentes partes. Esta técnica o patrón ha permitido una mayor organización y escabilidad del proyecto. 
+> El modelo flexbox maneja el <HighlightedCode>layout</HighlightedCode> de elementos en una única dimensión a la vez, ya sea como fila o como columna.
 
-El compoente principal del proyecto se llama 'App.tsx' y es donde se agregan el resto de los componentes que conforman la aplicación. Los componentes incluidos son los siguientes: 
+### Estructura: Componentes React
 
-* <strong>Logo.tsx</strong>: Componente que contiene el logo de la aplicación.
-* <strong>InputTask.tsx</strong>: Componente que contiene el input para añadir tareas.
-* <strong>ListTask.tsx</strong>: Componente que contiene la lista de tareas.
+La estructura del proyecto se ha desarrollado utilizando <HighlightedCode>React</HighlightedCode> y se han usado componentes para dividir el proyecto en diferentes partes. Esta técnica o patrón permite una mayor orgnización y escabilidad del proyecto.
 
-Además de los componentes principales mencionados anteriormente, también se han creado otros componentes para la modularización de la aplicación:
+El <HighlightedCode>Componente Principal</HighlightedCode> se llama <HighlightedCode>App.tsx</HighlightedCode>.Este componente es el <strong>end point</strong> de entrada a la aplicación y es donde se han agregado el resto de los compoenentes que conforman la aplicación.
 
-- <strong>Delete.tsx:</strong> Este componente representa el icono de eliminar. Se ha creado como un componente SVG para permitir una fácil personalización del estilo.
+```js
+import { InputTask, ListTasks, Logo } from "./components";
 
-- <strong>Edit.tsx:</strong> Este componente representa el icono de editar. Al igual que el componente Delete.tsx, se ha creado como un componente SVG para permitir una fácil personalización del estilo.
+function App() {
+  return (
+    <div className="container">
+      <div className="container-cabecera">
+        <Logo />
+      </div>
+      <div className="container-contenido">
+        <InputTask />
+        <ListTasks />
+      </div>
+    </div>
+  );
+}
 
-- <strong>ModalTask.tsx:</strong> Este componente es un modal que permite al usuario actualizar la descripción de una tarea. Se utiliza cuando el usuario hace clic en el botón de editar de una tarea específica. Este componente ha sido creado para mejorar la experiencia de usuario al permitir una edición más fácil y rápida de las tareas.
+export default App;
+```
 
-## Lógica/Funcionalidades
+Los componentes incluidos son los siguientes:
 
-La lógica de la aplicación se ha desarrollado utilizando React y contextAPI. ContextAPI es una API de React que permite el manejo del estado de la aplicación. Esto permite que los datos se puedan compartir entre componentes sin tener que pasarlos manualmente a través de las props.
+- <strong>Logo.tsx:</strong> Logo de Aplicación.
+- <strong>InputTask.tsx:</strong> Componente que contiene el input para añadir tareas.
+- <strong>ListTasks.tsx:</strong> Componete que contiene la lista de tareas.
+- <strong>Delete.tsx: </strong>Icono eliminar.
+- <strong>Edit.tsx:</strong>Icono editar.
+- <strong>ModalTask.tsx: </strong> Componente modal que permite al usuario actualizar
+  la descripción de una tarea.{" "}
+- <strong>CheckSucces.tsx: </strong> Icono del Check Correcto.
+- <strong>CheckVoid.tsx:</strong> Icono del Check Vacío.
 
-Se ha creado una contextAPI denominado 'LTProvider.tsx' que contiene el estado de la aplicación y las funciones para modificarlo. Este contextAPI se utiliza en el componente principal de la aplicación, 'App.tsx', para proporcionar los estados y las funcionalidad correspondiente, a los componentes secundarios.
-También es necesario crear 'LTContext.tsx' para definir el tipo de datos que se van a utilizar en el contextAPI y el contexto global del mismo.
+![Posición de los compoentes dentro del fs del proyecto](/img/esToDoReact.png)
+
+### Lógica/Funcionalidad
+
+La lógica de la aplicación se ha desarrollado utilizadno <HighlightedCode>React</HighlightedCode> y <HighlightedCode>ContextAPI</HighlightedCode>.
+
+> <HighlightedCode>ContextAPi</HighlightedCode>
+> es una <HighlightedCode>API</HighlightedCode> de <HighlightedCode>
+>   React
+> </HighlightedCode> que permite el manejo del estado de nuestra aplicación. Esto
+> permite que los datos se puedan compartir entre componentes sin tener que pasarlos
+> manualmente a través de los <HighlightedCode>props.</HighlightedCode>
+
+Se ha creado un contexto para controlar el estado de la aplicación de forma global, <HighlightedCode>LTProvider.tsx</HighlightedCode>.
+Este <strong>Provider</strong> contiene el estado de la aplicación y las funciones para modificarlo. También es necesario crear un contexto <HighlightedCode>LTPContext.tsx</HighlightedCode>, para definir el tipo de datos que va a usar nuestro Provider y el contexto global de la aplicación.
 
 La aplicación cuenta con varias funciones, entre ellas:
 
-- <strong>Obtener el valor del LocalStorage al entrar/recargar la app (useEffect):</strong> Esta función se ejecuta al entrar o recargar la aplicación para obtener el valor del LocalStorage. Si el valor del LocalStorage es nulo, no se devuelve ni obtiene nada. Para realizar esta tarea, se utiliza el hooks 'useEffect' y se guarda el valor del array en un estado llamado 'tasks'.
+- <strong>Obtener el listado de tareas del LocalStorage</strong>
+  <br />
+  Esta funcionalidad se ejecuta al entrar o recarga la aplicación para obtener
+  el listado de tareas guardado en él. Si no existen tareas en localStorage no
+  se devuelve ni se obtiene ndad. Para realizar esta Funcionalidad, se utiliza
+  el hooks useEffect y se guarda el listado de tareas en un estado llamado tasks
+- <strong>Agregar una nueva tarea</strong> <br /> Esta funcionalidad permite añadir
+  una nueva tarea al array de tareas. Se hace uso del hooks "useState" para guardar
+  el valor del input en un estado llamado "tasks", y una vez finalizada esta funcionalidad,
+  se agrega esta nueva tarea al LocalStorage. Esta función también controla si el
+  input está vacío o no, y en caso de estar vacío, muestra un mensaje de error a
+  través del estado "errorCreateTask".{" "}
 
-- <strong>Añadir una nueva tarea (handleCreateTask):</strong> Esta función permite añadir una nueva tarea al array de tareas. Se hace uso del hooks 'useState' para guardar el valor del input en un estado llamado 'tasks', y una vez finalizada la tarea, se agrega esta nueva tarea al LocalStorage. Esta función también controla si el input está vacío o no, y en caso de estar vacío, muestra un mensaje de error a través del estado 'errorCreateTask'.
+* <strong>Eliminar una tarea</strong>
+  <br />
+  Esta funcionalida permite eliminar una tarea del array de tareas mediante el
+  uso de "filter", que crea un nuevo array de tareas sin la tarea seleccionada.
+  Una vez finalizada esta funcionaliad, se actualize el LocalStorage con el
+  nuevo array de tareas y se actualiza el estado "tasks" con este nuevo array.
+  En resumen, la función uso el método "filter" para eliminar la tarea
+  seleccionada del estado, se guarda el nuevo array de tareas en el LocalStorage
+  y se actualiza el estado "tasks" para reflejar el cambio en la app.
+* <strong>Abrir el modal de editar una tarea </strong> <br />
+  Esta funcionaliad permite abrir el modal de editar una tarea. Para ello, se
+  utiliza el estado "showModal" y se cambia su valor a true. Esto permite que el
+  modal se muestre en la aplicación. Esta funcionaliad modifica el estado de la
+  tarea seleccionada "stateTask" para que el modal muestre la descripción y el
+  identificador de la tarea seleccionada por el usuario.
+* <strong>Guardar tarea editada</strong> <br />
+  Esta funcionalidad permite guardar la tarea actualizada en el array de tareas.
+  Para ello, se hace uso de la descripción agregada en el textarea del modal y
+  se la asigna dicho valor a la descripción de la tarea. Todo esto genera un
+  nuevo array de tareas que va a ser el que se va a guardar en el LocalStorage y
+  se va a utilizar para actualizar el estado "tasks". Por último, se cambia el
+  valor del estado "showModal" a false para cerrar el modal.
 
-- <strong>Eliminar una tarea (handleDeleteTask):</strong> Esta función permite eliminar una tarea del array de tareas mediante el uso de 'filter', que crea un nuevo array de tareas sin la tarea seleccionada. Una vez finalizada esta funcionaliad, se actualize el LocalStorage con el nuevo array de tareas y se actualiza el estado 'tasks' con este nuevo array. En resumen, la función uso el método 'filter' para eliminar la tarea seleccionada del estado, se guarda el nuevo array de tareas en el LocalStorage y se actualiza el estado 'tasks' para reflejar el cambio en la app.
+### Tecnologías
 
-- <strong>Abrir el modal de editar una tarea (handleDeleteTask):</strong> Esta función permite abrir el modal de editar una tarea. Para ello, se utiliza el estado 'showModal' y se cambia su valor a 'true'. Esto permite que el modal se muestre en la aplicación. Esta función modifica el estado de la tarea seleccionada 'stateTask' para que el modal muestre la descripción y el identificador de la tarea seleccionada por el usuario.
+<br />
 
-- <strong>Guardar tarea editar (handleSaveEdit):</strong> Esta función permite guardar la tarea actualizada en el array de tareas. Para ello, se hace uso de la descripción agregada en el 'textarea'del modal y se la asigna dicho valor a la descripción de la tarea. Todo esto genera un nuevo array de tareas que va a ser el que se va a guardar en el LocalStorage y se va a utilizar para actualizar el estado 'tasks'. Por último, se cambia el valor del estado 'showModal' a 'false' para cerrar el modal.
-
-
-## Tecnologías
-
-- <strong>React:</strong> Librería de JavaScript para crear interfaces de usuario.
-- <strong>TypeScript:</strong> Super conjunto de JavaScript que permite añadir tipado estático a JavaScript y otras características.
-- <strong>contextAPI:</strong> API de React que permite el manejo del estado de la aplicación.
-- <strong>CSS:</strong> Lenguaje de diseño gráfico para definir y crear la presentación de un documento estructurado escrito en un lenguaje de marcado.
-- <strong>Vite:'</strong> Herramienta de construcción web que permite un desarrollo rápido y eficiente. Utiliza esbuild para la compilación y el empaquetamiento de la aplicación.
-- <strong>Eslint:</strong> Herramienta de análisis de código para identificar patrones problemáticos encontrados en el código JavaScript.
+- <HighlightedCode>React:</HighlightedCode> Liberías de JavaScript para crear interfaces
+  de usuario.
+- <HighlightedCode>TypeScript:</HighlightedCode>Super conjunto de JavaScript que
+  permite agrgar tipado estático a JavaScript y otras características.
+- <HighlightedCode>contextAPI:</HighlightedCode> Permite el manejo de estado de la
+  aplicación.
+- <HighlightedCode>CSS:</HighlightedCode> Lenguaje de diseño gráfico para definir
+  y crear la presentaci´ón de un documento estructurado en un lengauje de marcado.
+- <HighlightedCode>Vite:</HighlightedCode>Herramienta de construcción web que
+  permite un desarrollo rápido y eficiente. Utiliza esbuild para la compilación
+  y el empaquetamiente de la aplicación.
+- <HighlightedCode>Eslint:</HighlightedCode> Herramienta de análisis de código para
+  identificar patrones problemáricos encontrado en código JavaScript.
