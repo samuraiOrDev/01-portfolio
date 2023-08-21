@@ -22,7 +22,7 @@ export const mainSectionText = {
     "Hola! Soy Víctor Manuel Ordiales García, desarrollador web y graduado en física. Aquí hallarás detalles sobre mi educación, experiencia laboral y proyectos destacados. ¡Hablemos para ver cómo puedo colaborar en tus metas tecnológicas!",
 };
 export const heroSectionButtons = [
-  { bgColor: "#ca8a04", title: "Download CV", to: "#cv" },
+  { bgColor: "#ca8a04", title: "Sobre mi", to: "#about-section" },
   { bgColor: "#5b21b6", title: "Contacto", to: "#contact-section" },
 ];
 
@@ -93,7 +93,7 @@ export const cardsMainSection = [
     description: "Proyectos personales",
     icon: AiOutlineProject,
     bgIcon: "#8f1f0d",
-    to: "#projects-section",
+    to: "/projects",
   },
   {
     title: "Habilidades",
@@ -372,7 +372,7 @@ export const arrayCourses: TypeArrayCourses[] = [
     item2: "Frontend: Html y Css.",
     item3: "Backend: Django y Flask.",
     item4: "Leer más",
-    url: "https://www.udemy.com/course/master-en-python-aprender-python-django-flask-y-tkinter//",
+    url: "https://www.udemy.com/course/master-en-python-aprender-python-django-flask-y-tkinter",
   },
   {
     id: 5,
@@ -382,7 +382,7 @@ export const arrayCourses: TypeArrayCourses[] = [
     item2: "Preprocesadores: Sass y Leess.",
     item3: "Flex y Grid.",
     item4: "Leer más",
-    url: "https://www.udemy.com/course/master-en-css-responsive-sass-flexbox-grid-y-boostrap-4/",
+    url: "https://www.udemy.com/course/master-en-css-responsive-sass-flexbox-grid-y-boostrap-4",
   },
   {
     id: 6,
@@ -392,28 +392,28 @@ export const arrayCourses: TypeArrayCourses[] = [
     item2: "Tecnologías Web: ReactJS, Sass y Firebase.",
     item3: "Tecnologías Desktop: ElectronJS",
     item4: "Leer más",
-    url: "https://www.udemy.com/course/electron-js-y-react-js-creando-un-spotify/",
+    url: "https://www.udemy.com/course/electron-js-y-react-js-creando-un-spotify",
   },
   {
     id: 7,
     title: "Curso Completo: Linux Bash Shell Scripting +Ejemplos Reales",
-    date: "MAYO 2022.",
+    date: "Mayo 2022.",
     item1: "Gestión de permisos: usuarios, grupos, ficheros, etc.",
     item2: "Redirecciones, tuberías, monitores de procesos,etc.",
     item3: "Fundamentos de Bash.",
     item4: "Leer más",
-    url: "https://www.udemy.com/course/shell-scripting-linux-bash/learn/lecture/27171062?start=240#overview",
+    url: "https://www.udemy.com/course/shell-scripting-linux-bash",
   },
   {
     id: 8,
     title: "Curso de Tailwind CSS - Desde cero hasta profesional",
-    date: "JULIO 2021.",
+    date: "Julio 2021.",
     item1: "Maquetación de páginas web.",
     item2: "Css y Tailwind.",
     item3: "Varios proyectos.",
     horas: "5.5 horas.",
     item4: "Leer más",
-    url: "https://www.udemy.com/course/shell-scripting-linux-bash/learn/lecture/27171062?start=240#overview",
+    url: "https://www.udemy.com/course/curso-de-tailwind-css-desde-cero-hasta-profesional",
   },
   {
     id: 9,
@@ -424,7 +424,7 @@ export const arrayCourses: TypeArrayCourses[] = [
     item3: "Hooks, Custom Hooks, MERN, etc.",
     horas: "54 horas.",
     item4: "Leer más",
-    url: "https://www.udemy.com/course/shell-scripting-linux-bash/learn/lecture/27171062?start=240#overview",
+    url: "https://www.udemy.com/course/react-cero-experto",
   },
   {
     id: 10,
@@ -435,7 +435,7 @@ export const arrayCourses: TypeArrayCourses[] = [
     item3: "MERN, Typescript, etc.",
     horas: "46 horas.",
     item4: "Leer más",
-    url: "https://www.udemy.com/course/shell-scripting-linux-bash/learn/lecture/27171062?start=240#overview",
+    url: "https://www.udemy.com/course/nextjs-fh",
   },
   {
     id: 11,
@@ -480,112 +480,30 @@ export const arrayCourses: TypeArrayCourses[] = [
     item4: "Leer más",
     url: "https://www.udemy.com/course/curso-diseno-web-moderno-desde-cero/",
   },
-];
-
-// porcentaje: number
-//     to: string
-//     bgColor?: string
-//     textColor?: string
-
-export const coursesCertificationsProgress = [
   {
-    id: 1,
-    title: "Tomcat para Administradores y desarrolladores",
-    porcentaje: 25,
-    bgColor: "rgb(127 29 29)",
-    textColor: "rgb(252 165 165)",
-    to: "https://www.udemy.com/course/tomcat-para-administradores-y-desarrolladores/",
+    id: 15,
+    title: "React Pro: Lleva tus bases al siguiente nivel",
+    date: "Agosto 2022 - Mayo 2023 | Plataforma Web Udemy.",
+    item1: "Formik, lazyload y módulos",
+    item2:
+      "Versionado semántico, Storybook y patrones de creación de componentes.",
+    item3: "TypeScript, Github Actions y formularios dinámicos",
+    horas: "26.5 horas.",
+    item4: "Leer más",
+    url: "https://www.udemy.com/course/react-pro",
   },
   {
-    id: 2,
-    title: "Microservicios con Spring Boot y Spring Cloud Netflix Eureka",
-    porcentaje: 11,
-    bgColor: "rgb(127 29 29)",
-    textColor: "rgb(252 165 165)",
-    to: "https://www.udemy.com/course/microservicios-con-spring-boot-y-spring-cloud/",
-  },
-  {
-    id: 3,
-    title: "Curso Django y Django rest framework de básico a profesional",
-    porcentaje: 50,
-    bgColor: "#ca8a04",
-    textColor: "#765103",
-    to: "https://www.udemy.com/course/curso-profesional-de-programacion-web-con-python-y-django/",
-  },
-  {
-    id: 4,
-    title: "React - La Guía Completa: Hooks Context Redux MERN +15 Apps",
-    porcentaje: 80,
-    bgColor: "#ca8a04",
-    textColor: "#765103",
-    to: "https://www.udemy.com/course/react-de-principiante-a-experto-creando-mas-de-10-aplicaciones/",
-  },
-  {
-    id: 5,
-    title: "Angular: De cero a experto - Edición 2023",
-    porcentaje: 33,
-    bgColor: "rgb(127 29 29)",
-    textColor: "rgb(252 165 165)",
-    to: "https://www.udemy.com/course/angular-fernando-herrera/",
-  },
-  {
-    id: 6,
-    title: "Node.js - Bootcamp Desarrollo Web inc. MVC y REST APIs",
-    porcentaje: 11,
-    bgColor: "rgb(127 29 29)",
-    textColor: "rgb(252 165 165)",
-    to: "https://www.udemy.com/course/nodejs-bootcamp-desarrollo-web-mvc-y-rest-apis/",
-  },
-  {
-    id: 7,
-    title: "Node: Entorno de ejecucción para JavaScript",
-    porcentaje: 70,
-    bgColor: "#ca8a04",
-    textColor: "#765103",
-    to: "https://www.udemy.com/course/node-de-cero-a-experto/",
-  },
-  {
-    id: 8,
-    title: "Nest: Desarrollo backend escalable con Node",
-    porcentaje: 35,
-    bgColor: "rgb(127 29 29)",
-    textColor: "rgb(252 165 165)",
-    to: "https://www.udemy.com/course/nest-framework/",
-  },
-  {
-    id: 9,
-    title: "GIT+GitHub: Todo un sistema de control de versiones de cero",
-    porcentaje: 10,
-    bgColor: "rgb(127 29 29)",
-    textColor: "rgb(252 165 165)",
-    to: "https://www.udemy.com/course/git-github/",
-  },
-  {
-    id: 10,
-    title: "Aprende lenguaje GO (GOLANG) desde cero a experto",
-    porcentaje: 33,
-    bgColor: "rgb(127 29 29)",
-    textColor: "rgb(252 165 165)",
-    to: "https://www.udemy.com/course/lenguaje-go/",
-  },
-  {
-    id: 11,
-    title: "React: Creando webapp Full Stack con Spring Boot 2023",
-    porcentaje: 17,
-    bgColor: "rgb(127 29 29)",
-    textColor: "rgb(252 165 165)",
-    to: "https://www.udemy.com/course/react-spring-creando-webapp-full-stack/",
-  },
-  {
-    id: 12,
-    title: "Adobe Experience Manager Site",
-    porcentaje: 0,
-    bgColor: "rgb(127 29 29)",
-    textColor: "rgb(252 165 165)",
-    to: "https://www.udemy.com/course/adobe-experience-manager-site/",
+    id: 16,
+    title: "Spring framework  & Spring Boot desde cero a experto",
+    date: "Marzo 2023 - Abril 2023 | Plataforma Web Udemy.",
+    item1: "Spring MVC, JPA y Seguridad",
+    item2: "Spring Boot + JPA + jQuery + Restful.",
+    item3: "Spring con Angular + JPA + Restful.",
+    horas: "40.5 horas.",
+    item4: "Leer más",
+    url: "https://www.udemy.com/course/spring-framework-5",
   },
 ];
-
 export const skillsSection = {
   title: "Habilidades",
   description:

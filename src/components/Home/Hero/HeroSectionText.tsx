@@ -9,14 +9,15 @@ import {
   animateHeroBanner,
   animateHeroSectionLeftInitialState,
 } from "@/data";
-import {
-  RefUseAnimate,
-  useAnimate,
-} from "@/hooks/useAnimate";
+import { RefUseAnimate, useAnimate } from "@/hooks/useAnimate";
 
 export const HeroSectionText: FC = () => {
-  const { supTitle, title, subTitle, descriptionSup, descriptionSub } = heroSectionText;
-  const [ref, controls] = useAnimate(animateHeroBanner,animateHeroSectionLeftInitialState);
+  const { supTitle, title, subTitle, descriptionSup, descriptionSub } =
+    heroSectionText;
+  const [ref, controls] = useAnimate(
+    animateHeroBanner,
+    animateHeroSectionLeftInitialState
+  );
   return (
     <motion.div
       className="flex flex-1 flex-col justify-center lg:items-start items-center"
