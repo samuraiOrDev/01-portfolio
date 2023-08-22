@@ -13,6 +13,7 @@
     "@types/node": "20.2.3",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
+    "@vercel/analytics": "^1.0.2",
     "atom-dark": "link:react-syntax-highlighter/dist/cjs/styles/prism/atom-dark",
     "atom-one-dark": "link:react-syntax-highlighter/dist/cjs/styles/hljs/atom-one-dark",
     "autoprefixer": "10.4.14",
