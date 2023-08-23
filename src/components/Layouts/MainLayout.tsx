@@ -3,6 +3,7 @@ import React, { FC } from "react";
 import { useRouter } from "next/router";
 import { NavBar } from "../NavBar";
 import { Footer } from "../Footer";
+import { ScrollButtonComponent } from "../ui/ScrollButtonComponent";
 
 interface TypeMainLayout {
   children: React.ReactNode;
@@ -55,6 +56,7 @@ export const MainLayout: FC<TypeMainLayout> = ({
       <div className={`bg-gray-950 text-[#A3B3BC] ${font}`}>
         <NavBar itemsListNavBar={itemsListNavBar} />
         {children}
+        <ScrollButtonComponent />
         <Footer />
       </div>
     </>
