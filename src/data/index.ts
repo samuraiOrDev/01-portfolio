@@ -75,13 +75,6 @@ export const animateMainSectionInitialStateContent = {
 
 export const cardsMainSection = [
   {
-    title: "Educación",
-    description: "Formación académica, cursos y certificaciones",
-    icon: FaUserGraduate,
-    bgIcon: "#0d9488",
-    to: "#education-section",
-  },
-  {
     title: "Experiencia",
     description: "Experiencia laboral y proyectos destacados",
     icon: MdWorkHistory,
@@ -89,11 +82,11 @@ export const cardsMainSection = [
     to: "#experience-section",
   },
   {
-    title: "Proyectos",
-    description: "Proyectos personales",
-    icon: AiOutlineProject,
-    bgIcon: "#8f1f0d",
-    to: "/projects",
+    title: "Educación",
+    description: "Formación académica, cursos y certificaciones",
+    icon: FaUserGraduate,
+    bgIcon: "#0d9488",
+    to: "#education-section",
   },
   {
     title: "Habilidades",
@@ -101,6 +94,13 @@ export const cardsMainSection = [
     icon: BsFillGearFill,
     bgIcon: "#5b21b6",
     to: "#skills-section",
+  },
+  {
+    title: "Proyectos",
+    description: "Proyectos personales",
+    icon: AiOutlineProject,
+    bgIcon: "#8f1f0d",
+    to: "/projects",
   },
 ];
 

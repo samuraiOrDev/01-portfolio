@@ -20,7 +20,8 @@ export const NavBar: FC<Props> = ({ itemsListNavBar }) => {
     };
   }, []);
   return (
-    <nav className="fixed w-full z-[6] p-6 flex justify-center items-center bg-gray-950">
+    /* fixed */
+    <nav className="w-full z-[6] p-6 flex justify-center items-center bg-gray-950">
       <div className="flex justify-between items-center w-full xl:max-w-[1280px] lg:flex-row flex-col">
         <Link href={"/"}>
           <LogoPrincipal />

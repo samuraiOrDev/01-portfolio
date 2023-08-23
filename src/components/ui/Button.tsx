@@ -1,24 +1,24 @@
-import Link from 'next/link'
-import React, { FC } from 'react'
+import Link from "next/link";
+import React, { FC } from "react";
 
 interface Props {
-    bgColor?: string;
-    title: string;
-    to: string;
+  bgColor?: string;
+  title: string;
+  to: string;
 }
-export const Button:FC<Props> = ({
-    bgColor = 'bg-violet-500',
-    title,
-    to
-}) => {
+export const Button: FC<Props> = ({ bgColor = "bg-violet-500", title, to }) => {
   return (
-    <div 
+    <div
       className={`flex-flex-row justify-center items-center py-3 px-6 rounded-full cursor-pointer min-h-[48px] text-white w-fit`}
-      style={{"backgroundColor": bgColor}}
+      style={{ backgroundColor: bgColor }}
+    >
+      <Link
+        href={to}
+        className="text-white font-bold text-[16px]"
+        title={title}
       >
-        <Link href={to} className='text-white font-bold text-[16px]' title={title}>
-            {title}
-        </Link>
+        {title}
+      </Link>
     </div>
-  )
-}
+  );
+};

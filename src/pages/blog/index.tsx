@@ -8,16 +8,16 @@ import { BlogTitle, CardBlog } from "@/components";
 import { getAllFilesMetaData } from "../../../lib/mdx";
 
 interface TypeProps {
-  id: number, 
-  title: string,
-  img: string,
-  slug: string
-  description: string
+  id: number;
+  title: string;
+  img: string;
+  slug: string;
+  description: string;
 }
 interface Props {
-  posts: TypeProps[]
+  posts: TypeProps[];
 }
-const Blog: NextPage<Props> = ({posts}) => {
+const Blog: NextPage<Props> = ({ posts }) => {
   return (
     <MainLayout
       title={frontMatterBlog.title}
@@ -25,7 +25,7 @@ const Blog: NextPage<Props> = ({posts}) => {
       font={inter.className}
     >
       <div
-        className="flex justify-center items-center flex-col sm:px-16 px-6 sm:pb-16 xs:pb-8 pb-12 lg:pt-6 pt-[80px]"
+        className="flex justify-center items-center flex-col sm:px-16 px-6 sm:pb-16 xs:pb-8 pb-12"
         id="blog"
       >
         <BlogTitle />
@@ -50,11 +50,8 @@ const Blog: NextPage<Props> = ({posts}) => {
 export async function getStaticProps() {
   const posts = await getAllFilesMetaData("data/blog");
   return {
-    props: {posts}
-  }
+    props: { posts },
+  };
 }
 
-
 export default Blog;
-
-

@@ -21,14 +21,14 @@ const Project = ({ source, frontMatter }) => {
       font={inter.className}
     >
       <motion.div
-        className="flex justify-center items-center flex-col sm:px-16 px-6 sm:pb-16 xs:pb-8 pb-12 lg:pt-6 pt-[80px]"
+        className="flex justify-center items-center flex-col sm:px-16 px-6 sm:pb-16 xs:pb-8 pb-12"
         animate={controls as AnimationControls}
         ref={ref as RefUseAnimate["ref"]}
         initial={animateMainSectionInitialState}
         id={`post-${frontMatter.id}`}
       >
         <div className="flex items-center xl:max-w-[768px] w-full lg:flex-row flex-col mx-auto gap-2 flex-wrap">
-          <div className="mt-[160px] md:p-10 text-start">
+          <div className="md:p-10 text-start">
             <MDXRemote {...source} components={MDXComponents} />
           </div>
         </div>

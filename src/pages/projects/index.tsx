@@ -24,7 +24,7 @@ const Projects: NextPage<Props> = ({ projects }) => {
       font={inter.className}
     >
       <div
-        className="flex justify-center items-center flex-col sm:px-16 px-6 sm:pb-16 xs:pb-8 pb-12 lg:pt-6 pt-[80px]"
+        className="flex justify-center items-center flex-col sm:px-16 px-6 sm:pb-16 xs:pb-8 pb-12"
         id="projects"
       >
         <ProjectTitle />

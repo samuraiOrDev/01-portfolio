@@ -10,13 +10,12 @@ export const BlogTitle = () => {
   );
   return (
     <motion.div
-      className="mt-[160px] p-10 text-center"
+      className="p-10 text-center"
       animate={controls as AnimationControls}
       ref={ref as RefUseAnimate["ref"]}
       initial={animateMainSectionInitialState}
     >
       <ElementH2 mainTitle={"Bienvenido a mi"} mainTitleTail={"Blog"} />
-      <ElementP description={"Descripción básica de lo que es el blog"} />
     </motion.div>
   );
 };

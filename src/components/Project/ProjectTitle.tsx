@@ -10,7 +10,7 @@ export const ProjectTitle = () => {
   );
   return (
     <motion.div
-      className="mt-[160px] p-10 text-center"
+      className="p-10 text-center"
       animate={controls as AnimationControls}
       ref={ref as RefUseAnimate["ref"]}
       initial={animateMainSectionInitialState}
