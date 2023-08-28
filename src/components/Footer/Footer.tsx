@@ -21,7 +21,7 @@ const iconsFooter = [
   },
   {
     icon: FaLinkedinIn,
-    to: "https://www.linkedin.com/in/samuraiOrDev/",
+    to: "https://www.linkedin.com/in/v%C3%ADctor-manuel-ordiales-garc%C3%ADa-777196206/",
     title: "Social Linkedin",
     target: "_blank",
   },

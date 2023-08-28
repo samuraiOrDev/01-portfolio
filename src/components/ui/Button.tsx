@@ -9,7 +9,7 @@ interface Props {
 export const Button: FC<Props> = ({ bgColor = "bg-violet-500", title, to }) => {
   return (
     <div
-      className={`flex-flex-row justify-center items-center py-3 px-6 rounded-full cursor-pointer min-h-[48px] text-white w-fit`}
+      className={`flex-flex-row justify-center items-center py-3 px-6 rounded-full cursor-pointer min-h-[48px] text-white w-fit transition duration-300 hover:scale-105`}
       style={{ backgroundColor: bgColor }}
     >
       <Link

@@ -5,6 +5,7 @@ import { RefUseAnimate, useAnimate } from "@/hooks/useAnimate";
 import { animateMainSection, animateMainSectionInitialState } from "@/data";
 import Link from "next/link";
 import { BsGithub, BsFillProjectorFill } from "react-icons/bs";
+import { BiBookAlt } from "react-icons/bi";
 interface Props {
   id: number;
   title: string;
@@ -34,9 +35,11 @@ export const CardProject: FC<Props> = ({
       ref={ref as RefUseAnimate["ref"]}
       initial={animateMainSectionInitialState}
     >
-      <div className="bg-zinc-900 shadow-lg   shadow-[#333] rounded-lg max-w-sm mb-5 transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-zinc-800">
+      <div className="bg-zinc-800  rounded-lg max-w-sm mb-5 transition duration-300 ease-in-out hover:scale-105">
         <div className="h-[300px] md:w-[380px] w-auto relative">
-          <Image className="rounded-t-lg" src={img} alt={title} fill />
+          <Link href={toProject} target="_blanck">
+            <Image className="rounded-t-lg" src={img} alt={title} fill />
+          </Link>
         </div>
         <div className="p-5">
           <h5 className="text-2xl tracking-tight text-white font-bold sm:text-[18px] text-[16px] mt-2 mb-2">
@@ -46,40 +49,47 @@ export const CardProject: FC<Props> = ({
             {description}
           </p>
 
-          {/* <Button title={"Leer más"} to={to} bgColor="#5b21b6" /> */}
           <div className="flex justify-center items-center flex-row w-full p-6 gap-1">
             <div className="  bg-purple-800 to-100% p-3 rounded flex items-center justify-center cursor-pointer transition duration-300  hover:scale-105 w-full">
               <Link
                 href={to}
-                className="flex items-center justify-center h-full w-full text-white"
+                className="flex items-center justify-center h-full w-full text-white flex-col"
               >
-                <svg
-                  className="w-5 h-5"
-                  fill="#efff"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
-                  <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
-                </svg>
+                <BiBookAlt className="w-5 h-5" />
+                Artículo
               </Link>
             </div>
             <div className=" bg-purple-800 to-100% p-3 rounded flex items-center justify-center cursor-pointer transition duration-300  hover:scale-105 w-full">
               <Link
                 href={toGitHub}
-                className="flex items-center justify-center h-full w-full text-white"
+                className="flex items-center justify-center h-full w-full text-white flex-col"
                 target="_blank"
               >
                 <BsGithub className="w-5 h-5" />
+                GitHub
               </Link>
             </div>
             <div className=" bg-purple-800 to-100% p-3 rounded flex items-center justify-center cursor-pointer transition duration-300  hover:scale-105 w-full">
               <Link
                 href={toProject}
-                className="flex items-center justify-center h-full w-full text-white"
+                className="flex items-center justify-center h-full w-full text-white flex-col"
                 target="_blank"
               >
-                <BsFillProjectorFill className="w-5 h-5" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-5 h-5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                  />
+                </svg>
+                Demo
               </Link>
             </div>
           </div>

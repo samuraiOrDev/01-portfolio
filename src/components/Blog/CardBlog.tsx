@@ -29,7 +29,7 @@ export const CardBlog: FC<Props> = ({
       ref={ref as RefUseAnimate["ref"]}
       initial={animateMainSectionInitialState}
     >
-      <div className="bg-zinc-900 shadow-lg shadow-[#333] rounded-lg max-w-sm mb-5 transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-zinc-800">
+      <div className="bg-zinc-800  rounded-lg max-w-sm mb-5 transition duration-300 ease-in-out hover:scale-105">
         <div className="h-[300px] md:w-[380px] w-auto relative">
           <Image className="rounded-t-lg" src={img} alt={title} fill />
         </div>

@@ -1,8 +1,7 @@
-import { FC, useContext, useEffect } from "react";
-//Components
+import { FC, useEffect } from "react";
+import Link from "next/link";
 import { LogoPrincipal } from "./Logo";
 import { ItemsNavBar, TypeItemsListNavBar } from "./ItemsNavBar";
-import Link from "next/link";
 interface Props {
   itemsListNavBar: TypeItemsListNavBar[];
 }
