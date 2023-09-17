@@ -1,6 +1,6 @@
-import { NextPage } from "next";
-import { Inter } from "next/font/google";
-const inter = Inter({ subsets: ["latin"] });
+import { NextPage } from "next"
+import { Inter } from "next/font/google"
+const inter = Inter({ subsets: ["latin"] })
 import {
   MainSection,
   HeroSection,
@@ -10,8 +10,8 @@ import {
   ContactSection,
   MainLayout,
   ExperienceSection,
-} from "@/components";
-import { frontMatter } from "@/data/config";
+} from "@/components"
+import { frontMatter } from "@/data/config"
 
 const HomePage: NextPage = () => {
   return (
@@ -28,7 +28,7 @@ const HomePage: NextPage = () => {
       <SkillsSection />
       <ContactSection />
     </MainLayout>
-  );
-};
+  )
+}
 
-export default HomePage;
+export default HomePage

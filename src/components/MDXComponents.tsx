@@ -1,10 +1,10 @@
-import React from "react";
-import { CodeBlock } from "./Mdx/CodeBlock";
-import { Table } from "./Mdx/Table";
-import { HighlightedCode } from "./Mdx/HighlightedCode";
-import { ComponentDate } from "./Mdx/ComponentDate";
-import { Link } from "./Mdx/Link";
-import { ImgPikachu } from "./Mdx/ImgPikachu";
+import React from "react"
+import { CodeBlock } from "./Mdx/CodeBlock"
+import { Table } from "./Mdx/Table"
+import { HighlightedCode } from "./Mdx/HighlightedCode"
+import { ComponentDate } from "./Mdx/ComponentDate"
+import { Link } from "./Mdx/Link"
+import { ImgPikachu } from "./Mdx/ImgPikachu"
 
 interface TypeProps {
   children:
@@ -16,7 +16,7 @@ interface TypeProps {
     | React.ReactPortal
     | React.PromiseLikeOfReactNode
     | null
-    | undefined;
+    | undefined
 }
 const MDXComponents = {
   // Componente de encabezado <h1>
@@ -26,19 +26,24 @@ const MDXComponents = {
     </h1>
   ),
   h2: (props: TypeProps) => (
-    <h1 className="text-3xl mt-10 font-bold text-gradient-h1">
+    <h2 className="text-3xl mt-10 font-bold text-gradient-h1">
       # {props.children}
-    </h1>
+    </h2>
   ),
   h3: (props: TypeProps) => (
     <h3 className="text-2xl mt-10 font-bold text-gradient-h1">
       ## {props.children}
     </h3>
   ),
+  H4Custom: (props: TypeProps) => (
+    <h4 className="text-xl mt-10 font-bold text-gradient-h1">
+      ### {props.children}
+    </h4>
+  ),
   h4: (props: TypeProps) => (
-    <h3 className="text-xl mt-10 font-bold text-gradient-h1">
+    <h4 className="text-xl mt-10 font-bold text-gradient-h1">
       {props.children}
-    </h3>
+    </h4>
   ),
   p: (props: TypeProps) => (
     <p className="mt-5 mb-2 text-start text-lg">{props.children}</p>
@@ -59,6 +64,6 @@ const MDXComponents = {
   Link,
   CodeBlock,
   ImgPikachu,
-};
+}
 
-export default MDXComponents;
+export default MDXComponents

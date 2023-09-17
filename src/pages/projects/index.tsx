@@ -1,20 +1,20 @@
-import { MainLayout, ProjectTitle, CardProject } from "@/components";
-import { frontMatterProject } from "@/data/config";
-import { NextPage } from "next";
-import { Inter } from "next/font/google";
-const inter = Inter({ subsets: ["latin"] });
-import { getAllFilesMetaData } from "../../../lib/mdx";
+import { MainLayout, ProjectTitle, CardProject } from "@/components"
+import { frontMatterProject } from "@/data/config"
+import { NextPage } from "next"
+import { Inter } from "next/font/google"
+const inter = Inter({ subsets: ["latin"] })
+import { getAllFilesMetaData } from "../../../lib/mdx"
 interface TypeProps {
-  id: number;
-  title: string;
-  img: string;
-  slug: string;
-  description: string;
-  toGitHub: string;
-  toProject: string;
+  id: number
+  title: string
+  img: string
+  slug: string
+  description: string
+  toGitHub: string
+  toProject: string
 }
 interface Props {
-  projects: TypeProps[];
+  projects: TypeProps[]
 }
 const Projects: NextPage<Props> = ({ projects }) => {
   return (
@@ -28,7 +28,7 @@ const Projects: NextPage<Props> = ({ projects }) => {
         id="projects"
       >
         <ProjectTitle />
-        <div className="flex items-center xl:max-w-[1280px] w-full lg:flex-row flex-col mx-auto gap-2 flex-wrap">
+        <div className="flex items-center justify-center xl:max-w-[1280px] w-full lg:flex-row  flex-col mx-auto gap-2 lg:gap-4 flex-wrap">
           {projects.map((post) => (
             <CardProject
               key={post.id}
@@ -44,15 +44,15 @@ const Projects: NextPage<Props> = ({ projects }) => {
         </div>
       </div>
     </MainLayout>
-  );
-};
-
-export async function getStaticProps() {
-  const projects = await getAllFilesMetaData("data/projects");
-  console.log(projects);
-  return {
-    props: { projects },
-  };
+  )
 }
 
-export default Projects;
+export async function getStaticProps() {
+  const projects = await getAllFilesMetaData("data/projects")
+  console.log(projects)
+  return {
+    props: { projects },
+  }
+}
+
+export default Projects

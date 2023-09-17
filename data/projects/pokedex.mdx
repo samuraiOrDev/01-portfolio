@@ -1,0 +1,178 @@
+---
+id: 4
+title: "Pokedex: Los primeros 151 pokemons"
+description: "Pokedex NextJS"
+img: "/img/pokedex.png"
+toGitHub: "https://github.com/samuraiOrDev/pokedex"
+toProject: "https://pokedex-roan-alpha.vercel.app/"
+---
+
+# Pokedex | Los primero 151 pokemons
+
+<ComponentDate date="28-08-2023" time="3 minutos" />
+<Link href="https://pokedex-roan-alpha.vercel.app/" />
+
+## Definición
+
+La aplicación o proyecto consiste en la implementación de un pokedex haciendo uso de una api creada por mismo, basada en la famosa <HighlightedCode>PokeApi</HighlightedCode>, y <HighlightedCode>NextJS</HighlightedCode>.
+
+Este conjunto de tecnologías permite una experiencia de usuario fluida y atractiva.
+
+Es un <HighlightedCode>proyecto alfa</HighlightedCode>. Actualmente solamente están implementadas la página principal y los 151 primeros pokemons.
+Aunque puede parecer poco para un proyecto, es tan denso y relativamente complejo la implmentación de estas secciones que merece un explicación detallada
+del desarrollo hasta el momento.
+
+El proyecto se puede dividir:
+
+- <HighlightedCode>Maquetación</HighlightedCode>
+- <HighlightedCode>Estructura: NextJS</HighlightedCode>
+- <HighlightedCode> Lógica/Funcionalidad</HighlightedCode>
+
+### Maquetación
+
+Se ha utilziado Css Vanila para la mquetación, permitiendo un gran libertad a la hora de realizar y personalizar el diseño. La maquetación se ha realizado teniendo en cuenta
+los siguientes principios o patrones:
+
+- <HighlightedCode>CssGlobal:</HighlightedCode> El css está recogido en un solo archivo
+  y esta decisión se basa en las características específicas del proyecto. Esta elección
+  presenta una serie de ventajas significativas, como la reducción en las solicitudes
+  HTTP, una menor carga inicial y una simplificación en la complejidad general del
+  desarrollo. Sin embargo, es importante reconocer que, a medida que la hoja de estilos
+  crece en tamaño, el mantenimiento puede volverse un desafío. Cuanto más extensa
+  sea la hoja de estilos, mayor será la complejidad para gestionar y trabajar con
+  los estilos.
+- <HighlightedCode>Responsive:</HighlightedCode> Uso de <strong>
+    media queries
+  </strong> para adaptar el diseño a diferentes tamaños de pantallas, ya sean dispostivos
+  móviles, tablets o ordenadores de sobremesa.
+- <HighlightedCode>FlexBox y Css Grid:</HighlightedCode>
+  Flexbox es excelente para diseños unidimensionales y componentes flexibles, mientras
+  que CSS Grid es perfecto para diseños bidimensionales y estructurados. Usar ambos
+  enfoques en este proyecto me ha brindado una gran versatilidad y el control a la
+  hora de crear el diseño.
+- <HighlightedCode>Pseudo-clase :root:</HighlightedCode> Está pseudo-clase permite
+  definir varibles con valores de propiedades css que se van a estar disponibles
+  de forma global en la aplicación.
+
+### Estructura: NextJS
+
+La estructura del proyecto se ha desarrollado utilizando <HighlightedCode>NextJS</HighlightedCode> y concretamente, utilizando el enfoque
+de <HighlightedCode>Pages Router</HighlightedCode>.
+
+<br />
+
+> <strong>¿Por qué el enfoque Pages Router?</strong>
+> <br />
+> El enfoque de Pages Router, con el uso de funciones como getStaticProps y
+> getStaticPaths, se adopta en este proyecto porque su contenido se beneficia
+> enormemente de la generación estática. Esto se debe a que el proyecto consume
+> una API que almacena y proporciona toda la información necesaria, y esta API
+> se utiliza exclusivamente durante el tiempo de construcción del proyecto.
+> <br /> En otras palabras, durante la fase de construcción del proyecto, se aprovecha
+> la capacidad de Next.js para generar páginas estáticas con contenido actualizado
+> desde la API. Luego, estas páginas se almacenan en caché y se sirven de manera
+> eficiente a los usuarios finales, eliminando la necesidad de realizar llamadas
+> a la API en tiempo real.
+
+La estructura del proyecto es la que sigue:
+
+<CodeBlock
+  text={String.raw`/
+├── api
+├── components
+├── data
+├── helpers
+├── interface
+├── pages
+├── public
+├── styles
+└── utils
+`}
+/>
+
+Estos directorios presentan cada uno funcionaliad concreta:
+
+- <strong>api:</strong> Directorio donde se encuentra la funcionaliad para obtener
+  los datos de API. Esta petición está realizada con axios.
+- <strong>components:</strong> Directorio con todos los componentes de react que
+  componente la aplicación.
+- <strong>data:</strong> Directorio de datos estácicos cómo los diferentes tipos
+  de pokemon y todas las habilidades existentes.
+- <strong>interface:</strong> Directorio con todos los tipos de datos que va usar
+  la aplicación. Estos es necesario debido a que usamos TypeScript.
+- <strong>pages:</strong> Directorio con las diferentes páginas que va a presentar
+  la aplicación.
+- <strong>styles:</strong> Directorio que contiene los estilos de la aplicación.
+- <strong>utils:</strong> Directorio con algunas funciones de utilidad para la aplicación.
+
+### Directorios importantes: Pages y Components
+
+#### Pages
+
+Probablemente sea el directorio más imporntate de la aplicación. En este directorio se definen las rutas y las páginas principales de la aplicación. Cada archivo en este directorio representa una ruta específica en el sitio web. Concretamente en este proyecto tenemos cuatro páginas:
+
+<CodeBlock
+  text={String.raw`/pages
+├── pokemon/[id].tsx
+├── index.tsx
+├── items.tsx
+└── moves.tsx
+`}
+/>
+
+- <strong>pokemon/[id].tsx: </strong> Esta página se va a encargar de renderizar
+  los diferentes pokemons. Aunque se desarrolla con enfoque dinámico, durante el
+  proceso de construcción del proyecto, se generan todas las páginas individuales
+  de los 151 Pokémon. Estas páginas se mantienen estáticas en la aplicación, ya que
+  se captura toda la información necesaria en tiempo de construcción y se mantienen
+  en cache.
+- <strong>index.tsx:</strong> Página de entrada de la aplicación donde se renderizan
+  los 151 pokemons y presenta acceso a su página propia.
+- <strong>items.tsx y moves.tsx:</strong> Páginas donde se renderizan todos los objetos
+  y movimientos existentes en el mundo de pokemon.
+
+### Components
+
+<CodeBlock
+  text={`/components
+├── Footer/Footer.tsx
+├── Home/PokemonCard.tsx
+├── Layouts/Layout.tsx
+└── Nav/Nav.tsx
+└── Pokemon
+`}
+/>
+
+- <strong>Footer/Footer.tsx:</strong> Renderiza el pie de todas las páginas.
+- <strong>Home/PokemonCard.tsx</strong> Renderiza un pokemon determinado en la página <HighlightedCode>index.tsx</HighlightedCode>
+- <strong>Layouts/Layout.tsx:</strong>Renderiza el layout (Cabecera, hijos y
+  Pie) en todas las páginas.
+- <strong>Pokemon:</strong> Directorio donde se encuentran todos los compoentes que
+  forman la página de detalles del pokemon <HighlightedCode>pokemon/[id].tsx</HighlightedCode>
+
+
+### Tecnologías
+
+<br />
+
+- <HighlightedCode>NextJS:</HighlightedCode> Es un popular un framework de desarrolla web de código abierto basado en React. Se ha convertido en una de las opciones más populares para construir aplicaciones web modernas y ràpidas.
+- <HighlightedCode>TypeScript:</HighlightedCode>Super conjunto de JavaScript que
+  permite agrgar tipado estático a JavaScript y otras características.
+- <HighlightedCode>contextAPI:</HighlightedCode> Permite el manejo de estado de la
+  aplicación.
+- <HighlightedCode>CSS:</HighlightedCode> Lenguaje de diseño gráfico para definir
+  y crear la presentaci´ón de un documento estructurado en un lengauje de marcado.
+- <HighlightedCode>axios:</HighlightedCode>Axios es una librería de JavaScript que se utiliza para realizar solicitudes HTTP desde el navegador o desde Node.js.
+- <HighlightedCode>Eslint:</HighlightedCode> Herramienta de análisis de código para
+  identificar patrones problemáricos encontrado en código JavaScript.
+- <HighlightedCode>chart.js:</HighlightedCode> Chart.js es una librería de JavaScript que permite crear gráficos interactivos y personalizados en tus aplicaciones web. 
+
+### Conclusión
+
+Este proyecto demuestra la versatibilidad y pontencialidad de esta tecnologías para crear aplicaciones web interactivas y eficientes. 
+Las combinaciones de Next.js para la gestión de rutas y la carga dinámica de componentes, junto con la API creada con la información de los pokemons, 
+permite construir una experiencia de usuario atractiva y educativa para los amantes de Pokemon. 
+
+Además, este proyecto ilustra cómo Next.js facilita la creación de aplicaciones SEO-friendly y de alto rendimiento al pre-renderizar páginas y optimizar la carga de recursos. 
+
+En última instancia, la Pokédex desarrollada en este proyecto es un ejemplo de cómo la tecnología moderna puede ser aprovechada para crear aplicaciones divertidas y funcionales que atraigan a una audiencia diversa y comprometida.

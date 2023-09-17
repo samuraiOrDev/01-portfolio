@@ -1,23 +1,23 @@
-import { FC } from "react";
+import { FC } from "react"
 // Packages Third
-import { AnimationControls, motion } from "framer-motion";
+import { AnimationControls, motion } from "framer-motion"
 // Components & Data
-import { Button } from "../../ui";
+import { Button } from "../../ui"
 import {
   heroSectionText,
   heroSectionButtons,
   animateHeroBanner,
   animateHeroSectionLeftInitialState,
-} from "@/data";
-import { RefUseAnimate, useAnimate } from "@/hooks/useAnimate";
+} from "@/data"
+import { RefUseAnimate, useAnimate } from "@/hooks/useAnimate"
 
 export const HeroSectionText: FC = () => {
   const { supTitle, title, subTitle, descriptionSup, descriptionSub } =
-    heroSectionText;
+    heroSectionText
   const [ref, controls] = useAnimate(
     animateHeroBanner,
     animateHeroSectionLeftInitialState
-  );
+  )
   return (
     <motion.div
       className="flex flex-1 flex-col justify-center lg:items-start items-center"
@@ -40,5 +40,5 @@ export const HeroSectionText: FC = () => {
         ))}
       </div>
     </motion.div>
-  );
-};
+  )
+}

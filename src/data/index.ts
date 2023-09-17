@@ -1,7 +1,7 @@
-import { FaUserGraduate } from "react-icons/fa";
-import { MdWorkHistory } from "react-icons/md";
-import { AiOutlineProject } from "react-icons/ai";
-import { BsFillGearFill } from "react-icons/bs";
+import { FaUserGraduate } from "react-icons/fa"
+import { MdWorkHistory } from "react-icons/md"
+import { AiOutlineProject } from "react-icons/ai"
+import { BsFillGearFill } from "react-icons/bs"
 
 export const heroSectionText = {
   supTitle: "Hola, soy",
@@ -10,21 +10,21 @@ export const heroSectionText = {
   descriptionSup: "Desarrollador Web y Graduado en Física.",
   descriptionSub:
     "Me considero amante de las nuevas tecnologías, del desarrollo de software y de la Física de Partículas.",
-};
+}
 
 export const mainSectionTitle = {
   mainTitle: "Bienvenido a mi",
   mainTitleTail: "Sitio Web",
-};
+}
 
 export const mainSectionText = {
   description:
-    "Hola! Soy Víctor Manuel Ordiales García, desarrollador web y graduado en física. Aquí hallarás detalles sobre mi educación, experiencia laboral y proyectos destacados. ¡Hablemos para ver cómo puedo colaborar en tus metas tecnológicas!",
-};
+    "Hola! Soy Víctor Manuel Ordiales García, desarrollador web y graduado en física. Aquí hallarás detalles sobre mi educación, experiencia laboral y proyectos destacados.",
+}
 export const heroSectionButtons = [
   { bgColor: "#ca8a04", title: "Sobre mi", to: "#about-section" },
   { bgColor: "#5b21b6", title: "Contacto", to: "#contact-section" },
-];
+]
 
 export const animateHeroBanner = {
   translateX: 0,
@@ -34,15 +34,15 @@ export const animateHeroBanner = {
     delay: 0.2,
     ease: [0, 0.71, 0.2, 1.01],
   },
-};
+}
 export const animateHeroSectionLeftInitialState = {
   translateX: -50,
   opacity: 0,
-};
+}
 export const animateHeroSectionRightInitialState = {
   translateX: 50,
   opacity: 0,
-};
+}
 
 export const animateMainSection = {
   translateY: 0,
@@ -52,7 +52,7 @@ export const animateMainSection = {
     delay: 0.2,
     ease: [0, 0.71, 0.2, 1.01],
   },
-};
+}
 export const animateMainSectionContent = {
   translateY: 0,
   opacity: 1,
@@ -61,17 +61,17 @@ export const animateMainSectionContent = {
     delay: 0.3,
     ease: [0, 0.71, 0.2, 1.01],
   },
-};
+}
 
 export const animateMainSectionInitialState = {
   translateY: 100,
   opacity: 0,
-};
+}
 
 export const animateMainSectionInitialStateContent = {
   translateY: 100,
   opacity: 0,
-};
+}
 
 export const cardsMainSection = [
   {
@@ -102,7 +102,7 @@ export const cardsMainSection = [
     bgIcon: "#8f1f0d",
     to: "/projects",
   },
-];
+]
 
 export const aboutMeSection = {
   title: "Conóceme:",
@@ -112,26 +112,26 @@ export const aboutMeSection = {
     "Como graduado en física, tengo una comprensión sólida de los principios matemáticos y científicos que rigen el mundo que nos rodea. Esta base sólida me ha permitido tener una perspectiva única en el mundo del desarrollo web",
     "Tengo más de dos años de experiencia en el desarrollo web. He trabajado en proyectos de desarrollo web personalizados, programación de scripts y manejo de bases de datos",
     "Soy una persona apasionada y dedicada que siempre está buscando oportunidades para seguir aprendiendo y mejorando mis habilidades. Me encanta estar al tanto de las últimas tendencias y tecnologías en el desarrollo web y la física, y aplicarlas en mis proyectos",
-    "Estoy emocionado de compartir mi pasión y conocimientos contigo. ¡Explora mi sección personal y descubre cómo puedo ayudarte!!",
+    "Estoy emocionado de compartir mi pasión y conocimientos contigo. ¡Explora mi sección personal!",
   ],
-};
+}
 
 export const educationSection = {
   title: "Educación",
   description:
-    "Uno de mis mayores logros académicos ha sido obtener el graduado en Física de la Universidad de Extremadura. Además de esta titulación, he realizado numerosos cursos enfocados en el desarrollo web y en el aprendizaje automático. Actualmente, sigo realizando una gran cantidad de cursos y certificaciones para seguir creciendo como profesional",
-};
+    "Uno de mis mayores logros académicos ha sido obtener el grado en Física en la Universidad de Extremadura. Además de esta titulación, he realizado numerosos cursos enfocados en el desarrollo web y el aprendizaje automático. Actualmente, sigo realizando una gran cantidad de cursos y certificaciones para seguir creciendo como profesional",
+}
 export interface ExperienceTag {
-  name: string;
-  bg: string;
-  textColor: string;
+  name: string
+  bg: string
+  textColor: string
 }
 export interface Experience {
-  id: number;
-  job: string;
-  date: string;
-  project: string;
-  tags: ExperienceTag[];
+  id: number
+  job: string
+  date: string
+  project: string
+  tags: ExperienceTag[]
 }
 export const experience = [
   {
@@ -238,7 +238,7 @@ export const experience = [
       },
     ],
   },
-].sort((a, b) => b.id - a.id);
+].sort((a, b) => b.id - a.id)
 
 export const educationSectionCards = [
   {
@@ -319,18 +319,18 @@ export const educationSectionCards = [
       },
     ],
   },
-].sort((a, b) => b.id - a.id);
+].sort((a, b) => b.id - a.id)
 
 export interface TypeArrayCourses {
-  id: number;
-  title: string;
-  date: string;
-  item1: string;
-  item2: string;
-  item3: string;
-  horas?: string;
-  item4: string;
-  url: string;
+  id: number
+  title: string
+  date: string
+  item1: string
+  item2: string
+  item3: string
+  horas?: string
+  item4: string
+  url: string
 }
 
 export const arrayCourses: TypeArrayCourses[] = [
@@ -503,17 +503,17 @@ export const arrayCourses: TypeArrayCourses[] = [
     item4: "Leer más",
     url: "https://www.udemy.com/course/spring-framework-5",
   },
-];
+]
 export const skillsSection = {
   title: "Habilidades",
   description:
     "Durante mi trayectoria profesional y estudiantil, he adquerido númerosos conocimientos tanto en el ámbito de la física como en el desarrollo de sofwate. A continuación, se muestran las tecnologías y habilidades que he adquirido/dominado durante todo este proceso",
-};
+}
 export const expeienceSection = {
   title: "Experiencia",
   description:
     "Tengo más de 2 años de experiencia trabajando en proyectos tanto de frontend como de backend, además de un breve período, de dos  meses, en el que me dediqué a proyectos de machine learning",
-};
+}
 export const allProjects = [
   {
     id: "frontend/1",
@@ -557,14 +557,14 @@ export const allProjects = [
     url: "https://gameboy-color.vercel.app/",
     repo: "https://github.com/samuraiOrDev/gameboy-color",
   },
-];
+]
 
 export interface TypeDescriptionBlog {
-  id: number;
-  title: string;
-  description: string;
-  img: string;
-  url: string;
+  id: number
+  title: string
+  description: string
+  img: string
+  url: string
 }
 
 export const descriptionBlog: TypeDescriptionBlog[] = [
@@ -611,4 +611,4 @@ export const descriptionBlog: TypeDescriptionBlog[] = [
     img: "https://res.cloudinary.com/practicaldev/image/fetch/s--O2cjB-id--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/a3exuz06e9h212pandfr.png",
     url: "crud-js-local-storage",
   },
-];
+]

@@ -1,29 +1,33 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react"
 
 export const ScrollButtonComponent = () => {
+  const scrollButtonRef = useRef<HTMLElement | null>(null)
+  const barScrollRef = useRef<HTMLElement | null>(null)
   useEffect(() => {
     document.querySelector(".scroll-button")?.addEventListener("click", () => {
-      window.scroll({ top: 0, behavior: "smooth" });
-    });
+      window.scroll({ top: 0, behavior: "smooth" })
+    })
     window.onscroll = function () {
-      const scrollButton = document.querySelector(
+      scrollButtonRef.current = document.querySelector(
         ".scroll-button"
-      ) as HTMLElement;
-      const barScroll = document.querySelector(".bar-scroll") as HTMLElement;
+      ) as HTMLElement
+      barScrollRef.current = document.querySelector(
+        ".bar-scroll"
+      ) as HTMLElement
 
       if (window.innerWidth < 1024) {
         window.scrollY > 40
-          ? ((scrollButton.style.display = "block"),
-            (barScroll.style.display = "block"))
-          : ((scrollButton.style.display = "none"),
-            (barScroll.style.display = "none"));
+          ? ((scrollButtonRef.current.style.display = "block"),
+            (barScrollRef.current.style.display = "block"))
+          : ((scrollButtonRef.current.style.display = "none"),
+            (barScrollRef.current.style.display = "none"))
       } else {
         window.scrollY > 40
-          ? (scrollButton.style.display = "block")
-          : (scrollButton.style.display = "none");
+          ? (scrollButtonRef.current.style.display = "block")
+          : (scrollButtonRef.current.style.display = "none")
       }
-    };
-  }, []);
+    }
+  }, [])
 
   return (
     <>
@@ -45,5 +49,5 @@ export const ScrollButtonComponent = () => {
       </button>
       <div className="bar-scroll bg-yellow-600"></div>
     </>
-  );
-};
+  )
+}

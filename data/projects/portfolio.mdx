@@ -1,0 +1,151 @@
+---
+id: 4
+title: "Mi Web personal"
+description: "Portfolio NextJS"
+img: "/img/portfolio.png"
+toGitHub: "https://github.com/samuraiOrDev/01-portfolio"
+toProject: "https://www.samuraior.dev/"
+---
+
+# Portfolio: Víctor Manuel Ordiales García
+
+<ComponentDate date="16-09-2023" time="3 minutos" />
+<Link href="https://www.samuraior.dev/" />
+
+
+
+## Definición
+
+El proyecto es mi portfolio personal realizado en <HighlightedCode>NextJS.</HighlightedCode>
+
+> ¿Por qué NextJS?
+> Opté por NextJS debido a su eficiencia y versatilidad. Este framework permite generar páginas estáticas de manera rápida y eficaz, ofreciendo un alto rendimiento y una optimización de SEO superior. Además, su sistema de rutas basado en archivos simplifica la organización del código.
+
+El proyecto se divide en las siguientes partes: 
+
+- <HighlightedCode>Maquetación:</HighlightedCode>
+- <HighlightedCode>Estructura del Código </HighlightedCode>
+- <HighlightedCode>Construcción de blogs/proyectos con mdx</HighlightedCode>
+- <HighlightedCode>Lógica/Funcionalidad</HighlightedCode>
+
+### Maquetación
+
+Uso de <HighlightedCode>TailwindCSS</HighlightedCode> para la maquetación debido a su filosofía de "primero la utilidad", que promueve una mayor eficiencia y control en el diseño. Este enfoque de framework facilita un desarrollo más ágil y rápido, aunque puede comprometer la personalización y la legibilidad del código.
+Además, diseñé algunos estilos personalizados para abordar requisitos específicos que no estaban cubiertos por las utilidades predeterminadas de TailwindCSS.
+
+#### Animaciones
+Para las animaciones, he utilizado <HighlightedCode>framer-motion</HighlightedCode>. 
+Es una librería de animaciones para React muy potente y flexible. Permite crear animaciones complejas con una sintaxis sencilla y clara. 
+Esta librería me ha permitido gestionar las transiciones entre páginas de manera eficiente y suave, proporcionando una experiencia de usuario mejorada y evitando así el cambio brusco del navegador cuando cambiamos de página.
+
+### Estructura del Código
+
+La estructura del proyecto se ha desarrollado utilizando <HighlightedCode>NextJS</HighlightedCode> y concretamente, utilizando el enfoque <HighlightedCode>Pages Router</HighlightedCode>, debido a la necesidad exclusiva de generar contenido estático y no tener que conectarse con ningún otro servicio o backend.
+
+La estructura del proyecto es la que sigue:
+
+<CodeBlock text={String.raw`/
+├── data
+├── lib
+├── public
+├── src
+    ├── components
+    ├── data
+    ├── hooks
+    ├── pages
+    └── styles
+`} className="language-bash"
+/>
+
+- <strong>data:</strong> Directorio donde se encuentras los arhivos .mdx de cada uno de los proyectos y blogs presentes en el portfolio.
+- <strong>lib:</strong> Directorio con la Funcionalidad para obtener toda la información de los proyectos y blogs. Esta funcionalidad nos va devolver tanto los blogs cómo los proyectos tratados de una determina forma para que NextJS pueda trabajar con ellos.
+- <strong>pubic:</strong>Directorio que contiene las imágenes e iconos.
+- <strong>src: </strong>Directorio principal del proyecto.
+- <strong>components: </strong>Directorio con los diferentes componentes de React que forman el proyecto.
+- <strong>hooks:</strong>Directorio que contiene customs hooks.
+- <strong>styles:</strong>Directorio con los estilos personalizados.
+
+
+<H4Custom>Directorios importantes: src/pages, src/components,  y src/data</H4Custom>
+
+#### Pages
+
+El directorio más importante de la aplicación. En este directorio, se definen las rutas y las páginas princiaples de la aplicación. Cada archivo en este directorio representa una ruta específica en el sitio web. 
+
+<CodeBlock
+  text={String.raw`/pages
+├── index.tsx
+├── blog/[slug].tsx  
+├── projects/[slug].tsx
+└── api/senEmail.ts
+`}
+/>
+- <strong>index.tsx:</strong> Página de entrada de la aplicación donde se renderizan todos los compoentes que forman la página princiapl del portfolio. Todos estos componente están rodeados de un componente denominado <HighlightedCode>MainLayout</HighlightedCode>. Este componente sirve de envoltorio para el resto de componentes de esa página y impote las reglas SEO que hallamos establecidos, así cómo la cabecera y el pie de la web. Los componentes que forman está páginas son básicamente: <HighlightedCode> jsx+TailwindCSS+framer-motion</HighlightedCode> y la información que renderizan se encuentra en forma de objetos json en el directorio <HighlightedCode>data</HighlightedCode>. Solamente mencionar, que hay un componente que se sale de la normal, dicho compoennte llama a un servicio de envíos de correos electrónicos.
+- <strong>blog/[slug].tsx</strong>Esta página se va encargar de renderizar los diferentes blogs(archivos data/blog/*.mdx) haciendo uso de getStaticPaths y getStaticProps.
+- <strong>projects/[slug].tsx</strong>Esta página se va encargar de renderizar los diferentes proyectos(archivos data/projects/*.mdx) haciendo uso de getStaticPaths y getStaticProps.
+- <strong>api:</strong> Este directorio funciona del lado del servidor y presenta un servicio que nos permite enviar correos electrónicos mediante una petición HTTP POST.
+
+#### Components
+
+El directorio `components` es donde se almacenan todos los componentes de React utilizados en el proyecto. Estos componentes son bloques de código reutilizables que definen cómo una cierta parte de la interfaz de usuario debe verse y comportarse. Cada componente tiene su propia lógica y estructura, y puede ser utilizado en múltiples lugares a lo largo del proyecto. Algunas de las funcionalidades más comunes que se pueden encontrar en estos componentes incluyen la renderización de datos, la manipulación del estado y la interacción con eventos del usuario.
+
+#### Data
+
+El directorio `data` alberga constantes de JavaScript, las cuales son objetos JSON con toda la información que se muestra en la página principal del sitio web. Estos objetos JSON contienen información detallada de cada una de las secciones que forman esa página.
+
+
+### Construcción de blogs/proyectos con mdx
+
+Los blogs y proyectos en este portfolio están construidos utilizando archivos MDX. MDX es una extensión de Markdown que permite utilizar componentes JSX directamente en tus archivos de texto. Esto significa que puedes escribir código React en tus archivos de Markdown, lo que te permite crear contenido interactivo y dinámico.
+Los archivos MDX de los blogs y proyectos se encuentran en el directorio <HighlightedCode>data</HighlightedCode>. Cada archivo MDX representa un blog o proyecto individual y contiene el contenido del mismo, escrito en Markdown, junto con cualquier componente React necesario.
+
+Para renderizar estos archivos MDX en las páginas de Next.js, se utiliza la biblioteca <HighlightedCode>next-mdx-remote</HighlightedCode>. Esta biblioteca permite importar archivos MDX como componentes React y renderizarlos en el servidor, lo que significa que el contenido de los blogs y proyectos se genera en tiempo de construcción y se sirve como HTML estático.
+
+El proceso de renderizado de los archivos MDX se realiza en las funciones <strong>getStaticProps</strong> y <strong>getStaticPaths</strong> de Next.js. En <strong>getStaticProps</strong>, se obtienen los datos del archivo MDX utilizando la función custom <strong>getFiles</strong> (lib/mdx.ts) y se pasan como props al componente de la página. En <strong>getStaticPaths</strong>, se obtienen las rutas de todos los archivos MDX utilizando la función custom <strong>getAllFilesMetaData</strong> (lib/mdx.ts), y se generan páginas estáticas para cada ruta.
+
+### Lógica/Funcionalidad
+
+El portfolio está repleto de funcionalidades diversas, pero en este momento, me centraré en destacar las más relevantes:
+
+
+- <strong>Navegación:</strong>La navegación es una parte crucial de cualquier aplicación web. En este portfolio, la navegación es manejada por Next.js, que proporciona un sistema de rutas basado en archivos. Esto significa que cada archivo en el directorio <HighlightedCode>pages</HighlightedCode> representa una ruta específica en el sitio web. Esto simplifica la organización del código y facilita la creación de nuevas páginas y rutas. Además, se ha implementado un menú de navegación interactivo que mejora la usabilidad del sitio.
+
+- <strong>Formulario de Contacto:</strong> El formulario de contacto es una característica importante de este portfolio. Permite a los visitantes enviar mensajes directamente desde el sitio web. Este formulario está construido con Formik, una potente biblioteca de React para la construcción de formularios, y Yup, una biblioteca de JavaScript para la validación de formularios. Esto asegura una experiencia de usuario fluida y una validación de datos robusta.
+
+- <strong>Secciones de la página principal:</strong> La página principal del portfolio está dividida en varias secciones. Estas secciones incluyen una introducción, una sección sobre mi, un listado de habilidades técnicas, una sección de experiencia y otra de educación, y un formulario de contacto. Todas estas secciones están realizadas con TailwindCSS para los estilos y Framer-Motion para el montaje del componente.
+
+
+
+### Tecnologías
+
+<br />
+
+- <HighlightedCode>NextJS:</HighlightedCode> Es un popular un framework de desarrolla web de código abierto basado en React. Se ha convertido en una de las opciones más populares para construir aplicaciones web modernas y ràpidas.
+- <HighlightedCode>TypeScript:</HighlightedCode>Super conjunto de JavaScript que
+  permite agrgar tipado estático a JavaScript y otras características.
+- <HighlightedCode>CSS:</HighlightedCode> Lenguaje de diseño gráfico para definir
+  y crear la presentaci´ón de un documento estructurado en un lengauje de marcado.
+- <HighlightedCode>TailwindCSS:</HighlightedCode>Es un marco de trabajo de CSS de utilidad primero que se utiliza para construir rápidamente interfaces de usuario personalizadas.
+- <HighlightedCode>formik:</HighlightedCode> Biblioteca de React que ayuda a manejar el estado, la validación y el manejo de errores en formularios.
+- <HighlightedCode>yup:</HighlightedCode> Biblioteca de JavaScript que permite definir esquemas de validación de objetos. Se utiliza comúnmente en combinación con formularios en React para validar la entrada del usuario antes de enviarla.
+- <HighlightedCode>eslint:</HighlightedCode>Herramienta de análisis de código que ayuda a los desarrolladores a mantener su código limpio y coherente siguiendo ciertas reglas y convenciones de codificación.
+- <HighlightedCode>framer-motion:</HighlightedCode> Librería de animaciones para React que permite crear animaciones complejas con una sintaxis sencilla y clara.
+- <HighlightedCode>gray-matter:</HighlightedCode> Es una biblioteca de JavaScript que ayuda a analizar archivos de front-matter.
+- <HighlightedCode>next-mdx-remote:</HighlightedCode> Biblioteca que permite utilizar MDX, una sintaxis que combina Markdown y JSX, en Next.js.
+- <HighlightedCode>react-syntax-highlighter:</HighlightedCode> beneficiaiblioteca de JavaScript que permite resaltar la sintaxis de código en aplicaciones React. Proporciona una forma fácil de mostrar código en tu aplicación con un resaltado de sintaxis agradable y personalizable.
+
+### Conclusión
+Este proyecto me ha permitido profundizar en el uso de tecnologías modernas de desarrollo web. He utilizado TailwindCSS y framer-motion para diseñar una interfaz de usuario interactiva y atractiva, y he estructurado el código utilizando el enfoque Pages Router de NextJS.
+En conclusión, este portfolio es una representación de mis habilidades y conocimientos como desarrollador web. Estoy muy satisfecho con el resultado final y creo que refleja mi crecimiento y aprendizaje en este campo.
+
+
+> **Nota {1}:** 
+Este artículo ofrece una visión general del proyecto, destacando sus aspectos más relevantes. Dada la complejidad y la multitud de componentes que conforman el proyecto, una explicación detallada de cada elemento sería extensa. Sin embargo, se ha puesto especial énfasis en resaltar las partes más significativas, proporcionando así una comprensión clara de la estructura y funcionamiento del proyecto.
+
+> 
+> **Nota {2}:** ¿Qué otros frameworks se podrían utilizar para realizar este tipo de proyectos? <br/>
+Existen varios frameworks y bibliotecas que podrían utilizarse para desarrollar un proyecto similar a este. Algunos de ellos son: <strong>Gatsby</strong>VueJS<strong></strong>, <strong>Angular</strong> y un gran etc. Sin embargo, yo recomendaría debido a las características del proyecto utilizar <strong>AstroJS</strong>. 
+Astro es un moderno framework de front-end que permite construir sitios web más rápidos. Además,  permite escribir componentes en varios lenguajes, como React, Vue y Svelte, y los renderiza a HTML estático en el servidor, lo que resulta en una carga de página más rápida y una mejor eficiencia en el uso de los recursos.
+
+
+

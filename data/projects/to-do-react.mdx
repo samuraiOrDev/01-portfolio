@@ -1,7 +1,7 @@
 ---
 id: 1
 title: "To-Do-React"
-description: "Proyecto de listado de tareas: React JS + Vite JS."
+description: "Listado de tareas ReactJS"
 img: "/img/toDoReact.png"
 toGitHub: "https://github.com/samuraiOrDev/To-Do-React"
 toProject: "https://tod-do-react.vercel.app/"
@@ -9,7 +9,7 @@ toProject: "https://tod-do-react.vercel.app/"
 
 # To Do React App
 
-<ComponentDate date="15-09-2023" time="10 minutos" />
+<ComponentDate date="15-08-2023" time="5 minutos" />
 <Link href="https://tod-do-react.vercel.app/" />
 
 ## Definición
@@ -51,22 +51,24 @@ La estructura del proyecto se ha desarrollado utilizando <HighlightedCode>React<
 
 El <HighlightedCode>Componente Principal</HighlightedCode> se llama <HighlightedCode>App.tsx</HighlightedCode>.Este componente es el <strong>end point</strong> de entrada a la aplicación y es donde se han agregado el resto de los compoenentes que conforman la aplicación.
 
-<CodeBlock text={`
-import { InputTask, ListTasks, Logo } from "./components";
+<CodeBlock text={String.raw`import { InputTask, ListTasks, Logo } from "./components";
 
 function App() {
-return (
+  return (
 
-<div className="container">
-  <div className="container-cabecera">
-    <Logo />
-  </div>
-  <div className="container-contenido">
-    <InputTask />
-    <ListTasks />
-  </div>
-</div>
-); } export default App; `} />
+    <div className="container">
+      <div className="container-cabecera">
+        <Logo />
+      </div>
+      <div className="container-contenido">
+        <InputTask />
+        <ListTasks />
+      </div>
+    </div>
+  ); 
+}
+ 
+export default App; `} />
 
 Los componentes incluidos son los siguientes:
 

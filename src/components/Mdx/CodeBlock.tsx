@@ -1,13 +1,13 @@
-import { FC } from "react";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { FC } from "react"
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
+import { oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism"
 
 interface Props {
-  text: string;
-  className: string;
+  text: string
+  className: string
 }
 export const CodeBlock: FC<Props> = ({ text, className = "java" }) => {
-  const language = className && className.split("-")[1];
+  const language = className && className.split("-")[1]
   return (
     <div className="mt-10 mb-10 w-[auto]">
       <SyntaxHighlighter
@@ -19,5 +19,5 @@ export const CodeBlock: FC<Props> = ({ text, className = "java" }) => {
         {text}
       </SyntaxHighlighter>
     </div>
-  );
-};
+  )
+}
