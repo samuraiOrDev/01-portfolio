@@ -35,8 +35,8 @@ export const HeroSectionText: FC = () => {
         {descriptionSup} <br /> {descriptionSub}
       </p>
       <div className="flex flex-row justify-start items-center gap-3">
-        {heroSectionButtons.map(({ bgColor, title, to }, index) => (
-          <Button key={index} bgColor={bgColor} title={title} to={to} />
+        {heroSectionButtons.map(({ bgColor, title, to, target }, index) => (
+          <Button key={index} bgColor={bgColor} title={title} to={to} target={target} />
         ))}
       </div>
     </motion.div>

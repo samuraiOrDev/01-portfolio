@@ -23,7 +23,7 @@ export const mainSectionText = {
 }
 export const heroSectionButtons = [
   { bgColor: "#ca8a04", title: "Sobre mi", to: "#about-section" },
-  { bgColor: "#5b21b6", title: "Contacto", to: "#contact-section" },
+  { bgColor: "#5b21b6", title: "Descargar CV", to: "cv-victor-manuel-ordiales-garcia.pdf", target: "_blank" },
 ]
 
 export const animateHeroBanner = {
