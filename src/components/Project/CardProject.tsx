@@ -14,6 +14,7 @@ interface Props {
   to: string
   toGitHub: string
   toProject: string | undefined
+  hasArticle: boolean
 }
 export const CardProject: FC<Props> = ({
   id,
@@ -23,6 +24,7 @@ export const CardProject: FC<Props> = ({
   to = "",
   toProject = "",
   toGitHub = "",
+  hasArticle = true
 }) => {
   const [ref, controls] = useAnimate(
     animateMainSection,
@@ -54,14 +56,25 @@ export const CardProject: FC<Props> = ({
           </p>
 
           <div className="flex justify-center items-center flex-row w-full p-6 gap-1">
-            <div className="  bg-purple-800 to-100% p-3 rounded flex items-center justify-center cursor-pointer transition duration-300  hover:scale-105 w-full">
-              <Link
-                href={to}
-                className="flex items-center justify-center h-full w-full text-white flex-col"
-              >
-                <BiBookAlt className="w-5 h-5" />
-                Artículo
-              </Link>
+            <div className=" bg-purple-800 to-100% p-3 rounded flex items-center justify-center cursor-pointer transition duration-300  hover:scale-105 w-full">
+
+              {
+                hasArticle ? (
+                  <Link
+                    href={to}
+                    className="flex items-center justify-center h-full w-full text-white flex-col"
+                  >
+                    <BiBookAlt className="w-5 h-5" />
+                    Artículo
+                  </Link>
+                ) : (
+                  <div className="ounded flex flex-col items-center justify-center cursor-pointer w-full opacity-50">
+                      <BiBookAlt className="w-5 h-5" />
+                      Artículo
+                  </div>
+                )
+              }
+              
             </div>
             <div className=" bg-purple-800 to-100% p-3 rounded flex items-center justify-center cursor-pointer transition duration-300  hover:scale-105 w-full">
               <Link

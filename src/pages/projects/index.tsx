@@ -12,6 +12,7 @@ interface TypeProps {
   description: string
   toGitHub: string
   toProject: string
+  hasArticle: boolean
 }
 interface Props {
   projects: TypeProps[]
@@ -39,6 +40,7 @@ const Projects: NextPage<Props> = ({ projects }) => {
               to={`/projects/${post.slug}`}
               toGitHub={post.toGitHub}
               toProject={post.toProject}
+              hasArticle={post.hasArticle}
             />
           ))}
         </div>
@@ -49,7 +51,6 @@ const Projects: NextPage<Props> = ({ projects }) => {
 
 export async function getStaticProps() {
   const projects = await getAllFilesMetaData("data/projects")
-  console.log(projects)
   return {
     props: { projects },
   }
