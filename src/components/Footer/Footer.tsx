@@ -21,7 +21,7 @@ const iconsFooter = [
   },
   {
     icon: FaLinkedinIn,
-    to: "https://www.linkedin.com/in/v%C3%ADctor-manuel-ordiales-garc%C3%ADa-777196206/",
+    to: "https://www.linkedin.com/in/v%C3%ADctor-manuel-ordiales-garc%C3%ADa/",
     title: "Social Linkedin",
     target: "_blank",
   },
@@ -43,7 +43,7 @@ export const Footer: FC<Props> = () => {
         </div>
         <div className="flex flex-1 justify-end items-start">
           <p className="sx:text-[18px] xs:leading-[22px] text-[16px] leading-[20px] font-bold md:text-left text-centertext-[#A3B3BC]">
-            Copyright @ 2023 Samuraior.dev
+            Copyright @ 2024 Samuraior.dev
           </p>
         </div>
       </div>
