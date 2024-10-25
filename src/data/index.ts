@@ -110,7 +110,7 @@ export const aboutMeSection = {
   parrafos: [
     "¡Hola! Soy Víctor Manuel Ordiales García, un apasionado del desarrollo web y la física. Mi experiencia y formación en ambas disciplinas me han permitido desarrollar habilidades únicas que me permiten abordar problemas de manera innovadora y creativa",
     "Como graduado en física, tengo una comprensión sólida de los principios matemáticos y científicos que rigen el mundo que nos rodea. Esta base sólida me ha permitido tener una perspectiva única en el mundo del desarrollo web",
-    "Tengo más de dos años de experiencia en el desarrollo web. He trabajado en proyectos de desarrollo web personalizados, programación de scripts y manejo de bases de datos",
+    "Tengo más de tres años de experiencia en el desarrollo web. He trabajado en proyectos de desarrollo web personalizados, programación de scripts y manejo de bases de datos",
     "Soy una persona apasionada y dedicada que siempre está buscando oportunidades para seguir aprendiendo y mejorando mis habilidades. Me encanta estar al tanto de las últimas tendencias y tecnologías en el desarrollo web y la física, y aplicarlas en mis proyectos",
     "Estoy emocionado de compartir mi pasión y conocimientos contigo. ¡Explora mi sección personal!",
   ],
